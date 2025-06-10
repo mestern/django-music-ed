@@ -1,0 +1,16 @@
+{% extends 'parent/base.html' %}
+{% block title %}post: {{ post.id }}{% endblock %}
+{% block content %}
+{% load jformat %}
+
+
+<h2>{{ post.title }}</h2>
+    {{ post.description | linebreaks }}
+    <br>
+    <hr>
+    <p style="color: red">auther: {{ post.auther }} </p>
+    <hr>
+    <p>{{ date | jformat:'%A'}}</p>
+{#    <p>{{ post.publish }}j</p>#}
+
+{% endblock %}
