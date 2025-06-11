@@ -1,5 +1,5 @@
 import datetime
-
+from django.core.paginator import Paginator
 from django.shortcuts import render, get_object_or_404
 from django.http import HttpResponse, Http404
 from . models import Post
@@ -13,9 +13,21 @@ def post_list(request):
     posts = Post.published.all()
     context = {
         'posts': posts,
-        'get_absolut_url': Post.get_absolute_url
+        'get_absolut_url': Post.get_absolute_url,
     }
     return render(request, "app1/list.html", context)
+
+
+def post_listp(request):
+    posts = Post.published.all()
+    paginator = Paginator(posts, 2)
+    page_number = request.GET.get('page', 1)
+    context = {
+        'posts': posts,
+        'get_absolut_url': Post.get_absolute_url,
+        'page_number': page_number
+    }
+    return render(request, "app1/listp.html", context)
 
 
 def post_detail(request, id):

@@ -10,7 +10,7 @@
 
     {% block head %}{% endblock %}
 </head>
-<body>
+<body class="{% block body_class%}{% endblock %}">
 {% include 'partials/header.html' %}
 {% include 'partials/navigation.html' %}
 <hr>
