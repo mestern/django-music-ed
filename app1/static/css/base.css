@@ -42,7 +42,7 @@ li {
 	box-shadow: 0.1rem 0.1rem 1.5rem rgba(0, 0, 0, 0.3);
 	border-radius: 0.25rem;
 	overflow: hidden;
-	background-color: white;
+	background-color: rgb(128, 128, 128, 0.75);
 }
 
 li::before {
@@ -60,7 +60,7 @@ h3 {
 	display: flex;
 	align-items: baseline;
 	margin: 0 0 1rem;
-	color: rgb(70 70 70);
+	color: goldenrod;
 }
 
 h3::before {

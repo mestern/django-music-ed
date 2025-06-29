@@ -1,19 +1,26 @@
 {% extends 'parent/base.html' %}
 {% block title %}posts list{% endblock %}
+{% load static %}
 {% block content %}
     <h1>posts list:</h1>
 
-        <ol style="--length: {{ posts.count }}" role="list">
+        <ol style="--length: {{ posts|length }}" role="list">
 
             {% for post in posts %}
                 <li style="--i: {{ forloop.counter }}">
                     <h3><a href="{{post.get_absolute_url}}">{{ post.title }}</a></h3>
                     <p>
-                    {{ post.description | truncatewords:3 }}
-                    {{ post.get_absolute_url }}
+                        {{ post.description | truncatewords:7 }}
+                        <br>
+                        address:{{ post.get_absolute_url }}
                         </p>
                 </li>
                 <br>{% endfor %}
         </ol>
 
+{% endblock %}
+{% block footer_block %}
+
+    {% include 'partials/paginator.html' with page=posts %}
+    <script src="{% static 'js/pagination.js' %}"></script>
 {% endblock %}

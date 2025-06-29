@@ -1,5 +1,5 @@
 import datetime
-from django.core.paginator import Paginator
+from django.core.paginator import Paginator, EmptyPage, PageNotAnInteger
 from django.shortcuts import render, get_object_or_404
 from django.http import HttpResponse, Http404
 from . models import Post
@@ -19,9 +19,26 @@ def post_list(request):
 
 
 def post_listp(request):
+
+    # give every posts with published status to posts to posts
     posts = Post.published.all()
-    paginator = Paginator(posts, 2)
-    page_number = request.GET.get('page', 1)
+
+    # give all of objects to paginator to be paginated
+    paginator = Paginator(posts, 3)
+
+    # get the page number from request
+    page_number = request.GET.get('page', 3)
+
+    try:
+        posts = paginator.page(page_number)
+    except EmptyPage:
+        # handle if page number is not exist
+        posts = paginator.page(paginator.num_pages)
+    except PageNotAnInteger:
+        # handle if page's number is not an integer
+        posts = paginator.page(1)
+
+
     context = {
         'posts': posts,
         'get_absolut_url': Post.get_absolute_url,

@@ -1,9 +1,12 @@
 {% extends 'parent/base.html' %}
+
 {% block title %}posts list{% endblock %}
+{% load static %}
+
+{#the content block in html body#}
 {% block content %}
+{#    page h1#}
     <h1>posts list:</h1>
-
-
 <div class="carousel">
     <div class="carousel__scene">
         <ol class="carousel__list">
@@ -25,6 +28,7 @@
     </div>
 </div>
 
-
+{#load base javascript file#}
+<script src="{% static 'js/base.js' %}"></script>
 
 {% endblock %}

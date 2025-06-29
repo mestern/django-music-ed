@@ -16,8 +16,12 @@
 <hr>
 {% block content %} {% endblock %}
 <hr>
-{% include 'partials/footer.html' %}
-<script src="{% static 'js/base.js' %}"></script>
+
+
 
 </body>
+<footer>
+    {% block footer_block %}{% endblock %}
+    {% include 'partials/footer.html' %}
+</footer>
 </html>
