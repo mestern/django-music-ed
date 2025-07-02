@@ -1,5 +1,5 @@
 from django.contrib import admin
-from .models import Post
+from .models import Post, Ticket
 from django_jalali.admin.filters import JDateFieldListFilter
 import django_jalali.admin as jadmin
 
@@ -17,3 +17,6 @@ class AdminPost(admin.ModelAdmin):
     raw_id_fields = ('auther', )
 
 
+@admin.register(Ticket)
+class AdminTicket(admin.ModelAdmin):
+    pass
