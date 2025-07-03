@@ -4,7 +4,7 @@ from django.core.paginator import Paginator, EmptyPage, PageNotAnInteger
 from django.shortcuts import render, get_object_or_404
 from django.http import HttpResponse, Http404
 from .models import Post, Ticket
-from forms import TicketForm
+from .forms import TicketForm
 
 
 def index(request):

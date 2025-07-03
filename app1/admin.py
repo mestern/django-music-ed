@@ -19,4 +19,4 @@ class AdminPost(admin.ModelAdmin):
 
 @admin.register(Ticket)
 class AdminTicket(admin.ModelAdmin):
-    pass
+    list_display = ('subject', 'name')
