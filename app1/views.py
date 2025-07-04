@@ -1,7 +1,9 @@
 import datetime
+
+from django.contrib.auth.models import User
 from django.views.generic import ListView, DetailView, FormView
 from django.core.paginator import Paginator, EmptyPage, PageNotAnInteger
-from django.shortcuts import render, get_object_or_404
+from django.shortcuts import render, get_object_or_404, redirect
 from django.http import HttpResponse, Http404
 from .models import Post, Ticket
 from .forms import TicketForm
@@ -78,18 +80,48 @@ class PostDetailView(DetailView):
     template_name = 'app1/details.html'
 
 
+# rezadolaty way to make a form :
 def ticket(request):
-    ticket_obj = Ticket.objects.create()
-    if request.method == 'POST':
+    if request.method == "POST":
         form = TicketForm(request.POST)
         if form.is_valid():
+            ticket_obj = Ticket.objects.create()
             cd = form.cleaned_data
-            ticket_obj.message = cd['message']
             ticket_obj.name = cd['name']
+            ticket_obj.message = cd['message']
             ticket_obj.email = cd['email']
             ticket_obj.phone = cd['phone']
             ticket_obj.subject = cd['subject']
+            ticket_obj.publish = cd['publish']
             ticket_obj.save()
-        else:
-            form = TicketForm()
-        return render(request, 'forms/ticket.html', {'form': form})
+            return redirect("app1:ticket")
+    else:
+        form = TicketForm()
+    return render(request, 'forms/ticket.html', {'form': form})
+
+
+
+# chatgpt way to make a form view:
+
+# def ticket(request):
+#     if request.method == "POST":
+#         form = TicketForm(request.POST)
+#         if form.is_valid():
+#             cd = form.cleaned_data
+#             # assume you're getting a valid user object her
+#
+#             Ticket.objects.create(
+#                 name=cd['name'],
+#                 email=cd['email'],
+#                 phone=cd['phone'],
+#                 subject=cd['subject'],
+#                 message=cd['message'],
+#                 publish=cd['publish'],
+#             )
+#             return redirect("app1:index")  # <-- must use return here
+#         else:
+#             return render(request, 'forms/ticket.html', {'form': form})
+#     else:
+#         form = TicketForm()
+#         return render(request, 'forms/ticket.html', {'form': form})
+

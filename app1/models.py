@@ -22,7 +22,7 @@ class Post(models.Model):
     title = models.CharField(max_length=250)
     description = models.TextField()
     slug = models.SlugField()
-    publish = jalali.jDateTimeField(default=timezone .now)
+    publish = jalali.jDateTimeField(default=timezone.now)
     created = jalali.jDateTimeField(auto_now_add=True)
     update = jalali.jDateTimeField(auto_now=True)
     status = models.CharField(max_length=250, choices=Status.choices, default=Status.DRAFT)
@@ -50,8 +50,24 @@ class Post(models.Model):
 
 
 class Ticket(models.Model):
+    SUBJECT_CHOICES = [
+        ('SUG', 'suggestions'),
+        ('CRT', 'criticism'),
+        ('REP', 'report')
+    ]
+    # name = models.ForeignKey(User, on_delete=models.CASCADE, related_name='user_ticket')
     name = models.CharField(max_length=30)
-    subject = models.CharField(max_length=250)
+    subject = models.CharField(choices=SUBJECT_CHOICES, default=SUBJECT_CHOICES[2])
     phone = models.CharField(max_length=11)
     email = models.CharField(max_length=250)
     message = models.TextField()
+    publish = jalali.jDateTimeField(default=jalali.timezone.now)
+
+    def __str__(self):
+        return self.phone
+
+    # class Meta:
+    #     ordering = ['name']
+    #     indexes = [
+    #         models.Index(fields=['name'])
+    #     ]
