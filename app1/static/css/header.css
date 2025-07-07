@@ -1,7 +1,7 @@
 /* General header container */
 .dark-header {
   background-color: #1e1e1e;
-  padding: 0.000001rem 0;
+  padding: 1rem 0;
   border-bottom: 1px solid #333;
   font-family: 'Segoe UI', sans-serif;
   color: #f0f0f0;
