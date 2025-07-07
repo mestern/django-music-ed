@@ -2,29 +2,31 @@
 
 {% block title %}posts list{% endblock %}
 {% load static %}
-
 {#the content block in html body#}
+{% block body_attributes %}class="bodyinf"{% endblock %}
 {% block content %}
 {#    page h1#}
     <h1>posts list:</h1>
-<div class="carousel">
-    <div class="carousel__scene">
-        <ol class="carousel__list">
+<div style="align-self: center">
+    <div class="carousel">
+        <div class="carousel__scene">
+            <ol class="carousel__list">
 
-            {% for post in posts %}
-                <li class="carousel__cell">
-        {#        <a href="{% url 'app1:post_details' post.id %}">{{ post.title }}</a>#}
-                    <span class="song__title"><a href="{{post.get_absolute_url}}">{{ post.title }}</a></span>
-                    <span class="song__year">{{ post.description | truncatewords:3 }}</span>
-                    <span class="song__artist">{{ post.get_absolute_url }}</span>
-                </li>
-                <br>
-            {% endfor %}
-        </ol>
-    </div>
-    <div class="carousel__controls">
-        <button class="previous-button">&#x1F446;&#x1F3FB;</button>
-        <button class="next-button">&#x1F447;&#x1F3FB;</button>
+                {% for post in posts %}
+                    <li class="carousel__cell">
+            {#        <a href="{% url 'app1:post_details' post.id %}">{{ post.title }}</a>#}
+                        <span class="song__title"><a href="{{post.get_absolute_url}}">{{ post.title }}</a></span>
+                        <span class="song__year">{{ post.description | truncatewords:3 }}</span>
+                        <span class="song__artist">{{ post.get_absolute_url }}</span>
+                    </li>
+                    <br>
+                {% endfor %}
+            </ol>
+        </div>
+        <div class="carousel__controls">
+            <button class="previous-button">&#x1F446;&#x1F3FB;</button>
+            <button class="next-button">&#x1F447;&#x1F3FB;</button>
+        </div>
     </div>
 </div>
 

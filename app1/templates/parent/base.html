@@ -7,12 +7,12 @@
     <meta charset="UTF-8">
     <title>{% block title %}{% endblock %}</title>
     <link rel="stylesheet" type="text/css" href={% static 'css/base.css' %}>
-
+    {% include 'partials/header.html' %}
     {% block head %}{% endblock %}
 </head>
-<body class="{% block body_class%}{% endblock %}">
-{% include 'partials/header.html' %}
-{% include 'partials/navigation.html' %}
+<body {% block body_attributes%}{% endblock %}>
+
+
 <hr>
 {% block content %} {% endblock %}
 <hr>

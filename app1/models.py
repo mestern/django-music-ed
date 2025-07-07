@@ -18,8 +18,8 @@ class Post(models.Model):
         REJECTED = 'RJ', 'Rejected'
 
     auther = models.ForeignKey(User, on_delete=models.CASCADE, related_name='user_posts')
-
     title = models.CharField(max_length=250)
+    image = models.ImageField(upload_to='posts/', blank=True, null=True)
     description = models.TextField()
     slug = models.SlugField()
     publish = jalali.jDateTimeField(default=timezone.now)

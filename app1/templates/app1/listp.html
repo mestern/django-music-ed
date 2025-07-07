@@ -1,14 +1,16 @@
 {% extends 'parent/base.html' %}
 {% block title %}object_listt list{% endblock %}
 {% load static %}
+
+{% block body_attributes %}class="bodyinf"{% endblock %}
 {% block content %}
     <h1>object_listt list:</h1>
-        <ol style="--length: {{ object_list|length }}" role="list">
+        <ol style="--length: {{ object_list|length }}" role="list" class="olli">
 
             {% for post in object_list %}
-                <li style="--i: {{ forloop.counter }}">
-                    <h3><a href="{{post.get_absolute_url}}">{{ post.title }}</a></h3>
-                    <p>
+                <li style="--i: {{ forloop.counter }}" class="lili">
+                    <h3 class="h3li"><a href="{{post.get_absolute_url}}">{{ post.title }}</a></h3>
+                    <p class="pli">
                         {{ post.description | truncatewords:7 }}
                         <br>
                         address:{{ post.get_absolute_url }}

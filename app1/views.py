@@ -29,6 +29,11 @@ class PostListView(ListView):
     template_name = 'app1/listp.html'
 
 
+class PostsView(ListView):
+    queryset = Post.published.all()
+    template_name = 'app1/posts.html'
+
+
 # def post_listp(request):
 #
 #     # give every posts with published status to posts to posts
