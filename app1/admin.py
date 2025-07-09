@@ -1,7 +1,7 @@
 from django.contrib import admin
-from .models import Post, Ticket
+from .models import Post, Ticket, Comment
 from django_jalali.admin.filters import JDateFieldListFilter
-import django_jalali.admin as jadmin
+# import django_jalali.admin as jadmin
 
 
 # admin.sites.AdminSite.site_header = "پنل مدیریت"
@@ -19,4 +19,10 @@ class AdminPost(admin.ModelAdmin):
 
 @admin.register(Ticket)
 class AdminTicket(admin.ModelAdmin):
-    list_display = ('name', 'phone', 'subject')
+    list_display = ('name', 'phone', 'subject')\
+
+
+@admin.register(Comment)
+class AdminTicket(admin.ModelAdmin):
+    list_display = ('name', 'active', 'created')
+    list_editable = ['active']
