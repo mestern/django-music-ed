@@ -22,14 +22,18 @@ class Post(models.Model):
     image = models.ImageField(upload_to='posts/', blank=True, null=True)
     description = models.TextField()
     slug = models.SlugField()
-    publish = jalali.jDateTimeField(default=timezone.now)
-    created = jalali.jDateTimeField(auto_now_add=True)
-    update = jalali.jDateTimeField(auto_now=True)
+    # publish = jalali.jDateTimeField(default=timezone.now)
+    publish = models.DateTimeField(default=timezone.now)
+    # created = jalali.jDateTimeField(auto_now_add=True)
+    created = models.DateTimeField(auto_now_add=True)
+    # update = jalali.jDateTimeField(auto_now=True)
+    update = models.DateTimeField(auto_now=True)
     status = models.CharField(max_length=250, choices=Status.choices, default=Status.DRAFT)
+    file = models.FileField(upload_to='documents/', blank=True, null=True)
 
 
-    # objects = models.Manager()
-    objects = jalali.jManager()
+    objects = models.Manager()
+    # objects = jalali.jManager()
     published = PublishedManager()
 
     class Meta:
@@ -61,7 +65,8 @@ class Ticket(models.Model):
     phone = models.CharField(max_length=11)
     email = models.CharField(max_length=250)
     message = models.TextField()
-    publish = jalali.jDateTimeField(default=jalali.timezone.now)
+    publish = models.DateTimeField(default=timezone.now)
+    # publish = jalali.jDateTimeField(default=jalali.timezone.now)
 
     def __str__(self):
         return self.phone
@@ -70,4 +75,8 @@ class Ticket(models.Model):
     #     ordering = ['name']
     #     indexes = [
     #         models.Index(fields=['name'])
-    #     ]
+
+
+
+class Comment(models.Model):
+    pass

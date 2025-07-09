@@ -5,7 +5,6 @@
 {% block content %}
     <h1>object_listt list:</h1>
         <ol style="--length: {{ object_list|length }}" role="list" class="olli">
-
             {% for post in object_list %}
                 <li style="--i: {{ forloop.counter }}" class="lili">
                     <h3 class="h3li"><a href="{{post.get_absolute_url}}">{{ post.title }}</a></h3>

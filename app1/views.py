@@ -34,22 +34,30 @@ class PostListView(ListView):
 class PostsView(ListView):
     queryset = Post.published.all()
     template_name = 'app1/posts.html'
+    extra_context = {'get_absolut_url': Post.get_absolute_url}
 
 
 def PostCreate(request):
     if request.method == 'POST':
+        print("post")
         form = PostCreateForm(request.POST)
+        print(form)
         if form.is_valid():
+            print('is valid')
             cd = form.cleaned_data
             Post.objects.create(
-                auther=cd['auth'],
+                auther=User.objects.get(username=cd['auth']),
                 title=cd['title'],
                 publish=cd['publish'],
                 image=cd['image'],
                 description=cd['description'],
             )
+            print('successes')
             return redirect('app1:posts')
+        else:
+            print('not valid')
     else:
+        print('not post')
         form = PostCreateForm()
     return render(request, "forms/post_create.html", {'form':form})
 

@@ -1,17 +1,23 @@
 {% extends 'parent/base.html' %}
-{% block title %}post: {{ post.id }}{% endblock %}
+{% load static %}
+{% block title %}{{ post.title }}{% endblock %}
+
 {% block content %}
-{#{% load jformat %}#}
+<link rel="stylesheet" href="{% static 'css/post_detail.css' %}">
 
+<div class="post-container">
+    <h1 class="post-title">{{ post.title }}</h1>
 
-{#<h2>{{ post.title }}</h2>#}
-{#    {{ post.description | linebreaks }}#}
-{#    <br>#}
-{#    <hr>#}
-{#    <p style="color: red">auther: {{ post.auther }} </p>#}
-{#    <hr>#}
-{#    <p>{{ date | jformat:'%A'}}</p>#}
-{#    <p>{{ post.publish }}j</p>#}
+    {% if post.image %}
+        <img src="{{ post.image.url }}" alt="{{ post.title }}" class="post-image">
+    {% endif %}
 
-        vless://9deda4f9-a9b9-4614-b840-ece9998ec6db@81.12.30.51:58045?path=%2F&security=&encryption=none&type=ws#%40YamYamProxy
+    <p class="post-author">By: {{ post.auther }}</p>
+
+    <div class="post-description">
+        {{ post.description|linebreaks }}
+    </div>
+
+    <p class="post-date">Published: {{ post.publish }}</p>
+</div>
 {% endblock %}
