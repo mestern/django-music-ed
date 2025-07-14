@@ -29,7 +29,7 @@ class Post(models.Model):
     # update = jalali.jDateTimeField(auto_now=True)
     update = models.DateTimeField(auto_now=True)
     status = models.CharField(max_length=250, choices=Status.choices, default=Status.DRAFT)
-    file = models.FileField(upload_to='documents/', blank=True, null=True)
+    file = models.FileField(upload_to='documents/', blank=True, null=True, )
 
 
     objects = models.Manager()
@@ -77,11 +77,10 @@ class Ticket(models.Model):
     #         models.Index(fields=['name'])
 
 
-
 class Comment(models.Model):
     post = models.ForeignKey(Post, on_delete=models.CASCADE, related_name='comments')
     name = models.CharField(max_length=30)
-    message = models.TextField(blank=True)
+    message = models.TextField()
     created = models.DateTimeField(auto_now_add=True)
     updated = models.DateTimeField(auto_now=True)
     active = models.BooleanField(default=True)

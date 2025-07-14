@@ -16,6 +16,7 @@
 
     <div class="post-description">
         {{ post.description|linebreaks }}
+        <a href={{ object.file.url }}>Download {{ object.file.size }}</a>
     </div>
 
     <p class="post-date">Published: {{ post.publish }}</p>
