@@ -1,0 +1,15 @@
+{% load static %}
+
+<script src="{% static 'js/player.js' %}"></script>
+<link rel="stylesheet" type="text/css" href={% static "css/player.css" %}>
+<div class="music-player" data-src="{{ audio_src }}">
+  <audio class="mp-audio" src="{{ audio_src }}"></audio>
+  <div class="mp-controls">
+    <button class="mp-play">▶️</button>
+    <input type="range" class="mp-timeline" value="0" min="0" max="100">
+  </div>
+  <div class="mp-time">
+    <span class="mp-current">0:00</span>
+    <span class="mp-total">0:00</span>
+  </div>
+</div>

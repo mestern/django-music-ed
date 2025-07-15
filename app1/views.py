@@ -54,10 +54,22 @@ def PostCreate(request):
 
 
 
-class PostDetailView(DetailView):
-    model = Post
-    template_name = 'app1/details.html'
+# class PostDetailView(DetailView):
+#     model = Post
+#     template_name = 'app1/details.html'
 
+
+def post_detail(request, pk):
+    post = get_object_or_404(Post, id=pk, status=Post.Status.PUBLISHED)
+    comments = post.comments.filter(active=True)
+    form = CommentFrom()
+    context = {
+        'post': post,
+        'comments': comments,
+        'form': form
+        }
+
+    return render(request, 'app1/details.html', context)
 
 
 # chatgpt way to make a form view:
@@ -84,9 +96,17 @@ def ticket(request):
 
 
 @require_POST
-def post_comment(request, post_id):
-    post = get_object_or_404(Post, id=post_id, status=Post.Status.PUBLISHED)
+def post_comment(request, pk):
+    post = get_object_or_404(Post, id=pk, status=Post.Status.PUBLISHED)
     comment = None
     form = CommentFrom(data=request.POST)
     if form.is_valid():
-        pass
+        comment = form.save(commit=False)
+        comment.post = post
+        comment.save()
+        context = {
+            'post': post,
+            'form': form,
+            'comment': comment,
+        }
+    return render(request, 'forms/comment.html', context)

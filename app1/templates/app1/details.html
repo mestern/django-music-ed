@@ -1,5 +1,6 @@
 {% extends 'parent/base.html' %}
 {% load static %}
+{% load player %}
 {% block title %}{{ post.title }}{% endblock %}
 
 {% block content %}
@@ -16,9 +17,11 @@
 
     <div class="post-description">
         {{ post.description|linebreaks }}
-        <a href={{ object.file.url }}>Download {{ object.file.size }}</a>
+        <a href={{ post.file.url }}>Download</a>
     </div>
-
+    {% music_player post.file.url %}
     <p class="post-date">Published: {{ post.publish }}</p>
 </div>
+
+
 {% endblock %}
