@@ -20,8 +20,9 @@
     </nav>
 
     <!-- Search bar -->
-    <form action="/search" method="GET" class="search-form">
-      <input type="text" name="q" placeholder="Search..." />
+    <form action="{% url 'app1:post_search' %}" method="GET" class="search-form">
+        {% csrf_token %}
+      <input type="text" name="query" required placeholder="Search..." />
       <button type="submit">🔍</button>
     </form>
   </div>

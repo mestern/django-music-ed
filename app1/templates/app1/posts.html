@@ -1,6 +1,7 @@
 {% extends 'parent/base.html' %}
 {% block title %}object_lists{% endblock %}
 {% load static %}
+{% load tags %}
 {% block content %}
 <link rel="stylesheet" href="{% static 'css/posts.css' %}">
 <div class="posts-container">
@@ -22,4 +23,5 @@
     <p>No post yet.</p>
   {% endfor %}
 </div>
+    {% comment_count 5 %}
 {% endblock %}

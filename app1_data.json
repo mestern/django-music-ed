@@ -1,0 +1,1986 @@
+ [
+{
+    "model": "admin.logentry",
+    "pk": 1,
+    "fields": {
+        "action_time": "2025-04-24T08:15:50.855Z",
+        "user": 1,
+        "content_type": 7,
+        "object_id": "1",
+        "object_repr": "xzxzx",
+        "action_flag": 1,
+        "change_message": "[{\"added\": {}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 2,
+    "fields": {
+        "action_time": "2025-05-01T19:37:52.133Z",
+        "user": 1,
+        "content_type": 7,
+        "object_id": "3",
+        "object_repr": "shell",
+        "action_flag": 2,
+        "change_message": "[{\"changed\": {\"fields\": [\"Status\"]}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 3,
+    "fields": {
+        "action_time": "2025-05-02T15:10:29.607Z",
+        "user": 1,
+        "content_type": 7,
+        "object_id": "4",
+        "object_repr": "shell",
+        "action_flag": 2,
+        "change_message": "[{\"changed\": {\"fields\": [\"Description\"]}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 4,
+    "fields": {
+        "action_time": "2025-05-02T15:10:44.406Z",
+        "user": 1,
+        "content_type": 7,
+        "object_id": "3",
+        "object_repr": "asdsda",
+        "action_flag": 2,
+        "change_message": "[{\"changed\": {\"fields\": [\"Title\"]}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 5,
+    "fields": {
+        "action_time": "2025-05-02T15:10:55.573Z",
+        "user": 1,
+        "content_type": 7,
+        "object_id": "2",
+        "object_repr": "dasdsadsa",
+        "action_flag": 2,
+        "change_message": "[{\"changed\": {\"fields\": [\"Title\"]}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 6,
+    "fields": {
+        "action_time": "2025-05-02T15:11:00.654Z",
+        "user": 1,
+        "content_type": 7,
+        "object_id": "2",
+        "object_repr": "dasdsadsa",
+        "action_flag": 2,
+        "change_message": "[{\"changed\": {\"fields\": [\"Status\"]}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 7,
+    "fields": {
+        "action_time": "2025-05-02T15:48:20.923Z",
+        "user": 1,
+        "content_type": 7,
+        "object_id": "4",
+        "object_repr": "shell",
+        "action_flag": 2,
+        "change_message": "[{\"changed\": {\"fields\": [\"Description\"]}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 8,
+    "fields": {
+        "action_time": "2025-05-30T21:38:20.738Z",
+        "user": 1,
+        "content_type": 7,
+        "object_id": "5",
+        "object_repr": "today",
+        "action_flag": 1,
+        "change_message": "[{\"added\": {}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 9,
+    "fields": {
+        "action_time": "2025-05-30T21:38:43.001Z",
+        "user": 1,
+        "content_type": 7,
+        "object_id": "5",
+        "object_repr": "today",
+        "action_flag": 2,
+        "change_message": "[{\"changed\": {\"fields\": [\"Publish\"]}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 10,
+    "fields": {
+        "action_time": "2025-05-30T21:39:07.523Z",
+        "user": 1,
+        "content_type": 7,
+        "object_id": "4",
+        "object_repr": "shell",
+        "action_flag": 2,
+        "change_message": "[{\"changed\": {\"fields\": [\"Publish\"]}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 11,
+    "fields": {
+        "action_time": "2025-05-30T21:39:20.075Z",
+        "user": 1,
+        "content_type": 7,
+        "object_id": "4",
+        "object_repr": "shell",
+        "action_flag": 2,
+        "change_message": "[{\"changed\": {\"fields\": [\"Publish\"]}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 12,
+    "fields": {
+        "action_time": "2025-05-30T21:40:09.909Z",
+        "user": 1,
+        "content_type": 7,
+        "object_id": "4",
+        "object_repr": "shell",
+        "action_flag": 2,
+        "change_message": "[{\"changed\": {\"fields\": [\"Publish\"]}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 13,
+    "fields": {
+        "action_time": "2025-05-30T21:40:27.770Z",
+        "user": 1,
+        "content_type": 7,
+        "object_id": "5",
+        "object_repr": "today",
+        "action_flag": 2,
+        "change_message": "[{\"changed\": {\"fields\": [\"Publish\"]}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 14,
+    "fields": {
+        "action_time": "2025-05-30T21:40:41.474Z",
+        "user": 1,
+        "content_type": 7,
+        "object_id": "5",
+        "object_repr": "today",
+        "action_flag": 2,
+        "change_message": "[{\"changed\": {\"fields\": [\"Publish\"]}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 15,
+    "fields": {
+        "action_time": "2025-05-30T21:40:53.260Z",
+        "user": 1,
+        "content_type": 7,
+        "object_id": "5",
+        "object_repr": "today",
+        "action_flag": 2,
+        "change_message": "[{\"changed\": {\"fields\": [\"Publish\"]}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 16,
+    "fields": {
+        "action_time": "2025-05-30T21:41:21.117Z",
+        "user": 1,
+        "content_type": 7,
+        "object_id": "5",
+        "object_repr": "today",
+        "action_flag": 2,
+        "change_message": "[{\"changed\": {\"fields\": [\"Publish\"]}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 17,
+    "fields": {
+        "action_time": "2025-06-11T21:40:36.555Z",
+        "user": 1,
+        "content_type": 7,
+        "object_id": "6",
+        "object_repr": "look at this pice of cake",
+        "action_flag": 1,
+        "change_message": "[{\"added\": {}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 18,
+    "fields": {
+        "action_time": "2025-06-11T21:40:40.022Z",
+        "user": 1,
+        "content_type": 7,
+        "object_id": "6",
+        "object_repr": "look at this pice of cake",
+        "action_flag": 2,
+        "change_message": "[{\"changed\": {\"fields\": [\"Status\"]}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 19,
+    "fields": {
+        "action_time": "2025-06-25T17:51:23.226Z",
+        "user": 1,
+        "content_type": 7,
+        "object_id": "7",
+        "object_repr": "error 404",
+        "action_flag": 1,
+        "change_message": "[{\"added\": {}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 20,
+    "fields": {
+        "action_time": "2025-06-29T20:02:55.251Z",
+        "user": 1,
+        "content_type": 7,
+        "object_id": "8",
+        "object_repr": "new post",
+        "action_flag": 1,
+        "change_message": "[{\"added\": {}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 21,
+    "fields": {
+        "action_time": "2025-07-02T18:23:39.632Z",
+        "user": 1,
+        "content_type": 7,
+        "object_id": "9",
+        "object_repr": "dsaddsads",
+        "action_flag": 1,
+        "change_message": "[{\"added\": {}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 22,
+    "fields": {
+        "action_time": "2025-07-03T00:01:59.097Z",
+        "user": 1,
+        "content_type": 8,
+        "object_id": "2",
+        "object_repr": "Ticket object (2)",
+        "action_flag": 1,
+        "change_message": "[{\"added\": {}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 23,
+    "fields": {
+        "action_time": "2025-07-03T00:14:12.834Z",
+        "user": 1,
+        "content_type": 7,
+        "object_id": "10",
+        "object_repr": "dsasd",
+        "action_flag": 1,
+        "change_message": "[{\"added\": {}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 24,
+    "fields": {
+        "action_time": "2025-07-03T00:14:30.761Z",
+        "user": 1,
+        "content_type": 8,
+        "object_id": "11",
+        "object_repr": "dsadsad",
+        "action_flag": 1,
+        "change_message": "[{\"added\": {}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 25,
+    "fields": {
+        "action_time": "2025-07-03T02:47:24.708Z",
+        "user": 1,
+        "content_type": 8,
+        "object_id": "2",
+        "object_repr": "REP",
+        "action_flag": 1,
+        "change_message": "[{\"added\": {}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 26,
+    "fields": {
+        "action_time": "2025-07-03T02:47:38.746Z",
+        "user": 1,
+        "content_type": 8,
+        "object_id": "1",
+        "object_repr": "SUG",
+        "action_flag": 2,
+        "change_message": "[{\"changed\": {\"fields\": [\"Subject\", \"Email\", \"Publish\"]}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 27,
+    "fields": {
+        "action_time": "2025-07-03T06:53:29.118Z",
+        "user": 1,
+        "content_type": 8,
+        "object_id": "5",
+        "object_repr": "213",
+        "action_flag": 3,
+        "change_message": ""
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 28,
+    "fields": {
+        "action_time": "2025-07-03T06:53:29.118Z",
+        "user": 1,
+        "content_type": 8,
+        "object_id": "4",
+        "object_repr": "",
+        "action_flag": 3,
+        "change_message": ""
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 29,
+    "fields": {
+        "action_time": "2025-07-03T06:53:29.118Z",
+        "user": 1,
+        "content_type": 8,
+        "object_id": "3",
+        "object_repr": "",
+        "action_flag": 3,
+        "change_message": ""
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 30,
+    "fields": {
+        "action_time": "2025-07-03T06:53:29.118Z",
+        "user": 1,
+        "content_type": 8,
+        "object_id": "2",
+        "object_repr": "09919679629",
+        "action_flag": 3,
+        "change_message": ""
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 31,
+    "fields": {
+        "action_time": "2025-07-03T06:53:29.118Z",
+        "user": 1,
+        "content_type": 8,
+        "object_id": "1",
+        "object_repr": "12345678912",
+        "action_flag": 3,
+        "change_message": ""
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 32,
+    "fields": {
+        "action_time": "2025-07-07T07:03:35.905Z",
+        "user": 1,
+        "content_type": 7,
+        "object_id": "10",
+        "object_repr": "dsasd",
+        "action_flag": 2,
+        "change_message": "[{\"changed\": {\"fields\": [\"Image\"]}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 33,
+    "fields": {
+        "action_time": "2025-07-07T07:31:52.695Z",
+        "user": 1,
+        "content_type": 7,
+        "object_id": "8",
+        "object_repr": "new post",
+        "action_flag": 2,
+        "change_message": "[{\"changed\": {\"fields\": [\"Image\"]}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 34,
+    "fields": {
+        "action_time": "2025-07-07T08:03:24.837Z",
+        "user": 1,
+        "content_type": 7,
+        "object_id": "8",
+        "object_repr": "anathema | fragile dreams",
+        "action_flag": 2,
+        "change_message": "[{\"changed\": {\"fields\": [\"Title\", \"Image\", \"Description\", \"Slug\", \"Publish\"]}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 35,
+    "fields": {
+        "action_time": "2025-07-07T08:03:53.050Z",
+        "user": 1,
+        "content_type": 7,
+        "object_id": "8",
+        "object_repr": "anathema | fragile dreams",
+        "action_flag": 2,
+        "change_message": "[{\"changed\": {\"fields\": [\"Image\"]}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 36,
+    "fields": {
+        "action_time": "2025-07-07T08:05:42.334Z",
+        "user": 1,
+        "content_type": 7,
+        "object_id": "5",
+        "object_repr": "Nina Symon",
+        "action_flag": 2,
+        "change_message": "[{\"changed\": {\"fields\": [\"Title\", \"Image\", \"Description\", \"Publish\"]}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 37,
+    "fields": {
+        "action_time": "2025-07-09T02:27:52.308Z",
+        "user": 1,
+        "content_type": 7,
+        "object_id": "8",
+        "object_repr": "anathema | fragile dreams",
+        "action_flag": 2,
+        "change_message": "[{\"changed\": {\"fields\": [\"File\"]}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 38,
+    "fields": {
+        "action_time": "2025-07-09T09:29:26.969Z",
+        "user": 1,
+        "content_type": 9,
+        "object_id": "1",
+        "object_repr": "mohammad: Nina Symon",
+        "action_flag": 1,
+        "change_message": "[{\"added\": {}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 39,
+    "fields": {
+        "action_time": "2025-07-09T09:30:46.969Z",
+        "user": 1,
+        "content_type": 9,
+        "object_id": "1",
+        "object_repr": "mohammad: Nina Symon",
+        "action_flag": 2,
+        "change_message": "[{\"changed\": {\"fields\": [\"Message\"]}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 40,
+    "fields": {
+        "action_time": "2025-07-11T08:33:46.104Z",
+        "user": 1,
+        "content_type": 7,
+        "object_id": "5",
+        "object_repr": "Nina Symon",
+        "action_flag": 2,
+        "change_message": "[{\"changed\": {\"fields\": [\"File\"]}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 41,
+    "fields": {
+        "action_time": "2025-07-13T17:57:20.763Z",
+        "user": 1,
+        "content_type": 7,
+        "object_id": "16",
+        "object_repr": "Jat upload",
+        "action_flag": 2,
+        "change_message": "[{\"changed\": {\"fields\": [\"Status\"]}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 42,
+    "fields": {
+        "action_time": "2025-07-16T13:40:06.467Z",
+        "user": 1,
+        "content_type": 9,
+        "object_id": "6",
+        "object_repr": "kir: Nina Symon",
+        "action_flag": 3,
+        "change_message": ""
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 43,
+    "fields": {
+        "action_time": "2025-07-27T12:54:15.326Z",
+        "user": 1,
+        "content_type": 7,
+        "object_id": "8",
+        "object_repr": "anathema | fragile dreams",
+        "action_flag": 2,
+        "change_message": "[{\"changed\": {\"fields\": [\"Auther\"]}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 44,
+    "fields": {
+        "action_time": "2025-07-29T11:07:33.519Z",
+        "user": 1,
+        "content_type": 7,
+        "object_id": "8",
+        "object_repr": "anathema | fragile dreams",
+        "action_flag": 2,
+        "change_message": "[{\"changed\": {\"fields\": [\"View\"]}}]"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 1,
+    "fields": {
+        "name": "Can add log entry",
+        "content_type": 1,
+        "codename": "add_logentry"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 2,
+    "fields": {
+        "name": "Can change log entry",
+        "content_type": 1,
+        "codename": "change_logentry"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 3,
+    "fields": {
+        "name": "Can delete log entry",
+        "content_type": 1,
+        "codename": "delete_logentry"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 4,
+    "fields": {
+        "name": "Can view log entry",
+        "content_type": 1,
+        "codename": "view_logentry"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 5,
+    "fields": {
+        "name": "Can add permission",
+        "content_type": 2,
+        "codename": "add_permission"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 6,
+    "fields": {
+        "name": "Can change permission",
+        "content_type": 2,
+        "codename": "change_permission"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 7,
+    "fields": {
+        "name": "Can delete permission",
+        "content_type": 2,
+        "codename": "delete_permission"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 8,
+    "fields": {
+        "name": "Can view permission",
+        "content_type": 2,
+        "codename": "view_permission"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 9,
+    "fields": {
+        "name": "Can add group",
+        "content_type": 3,
+        "codename": "add_group"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 10,
+    "fields": {
+        "name": "Can change group",
+        "content_type": 3,
+        "codename": "change_group"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 11,
+    "fields": {
+        "name": "Can delete group",
+        "content_type": 3,
+        "codename": "delete_group"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 12,
+    "fields": {
+        "name": "Can view group",
+        "content_type": 3,
+        "codename": "view_group"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 13,
+    "fields": {
+        "name": "Can add user",
+        "content_type": 4,
+        "codename": "add_user"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 14,
+    "fields": {
+        "name": "Can change user",
+        "content_type": 4,
+        "codename": "change_user"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 15,
+    "fields": {
+        "name": "Can delete user",
+        "content_type": 4,
+        "codename": "delete_user"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 16,
+    "fields": {
+        "name": "Can view user",
+        "content_type": 4,
+        "codename": "view_user"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 17,
+    "fields": {
+        "name": "Can add content type",
+        "content_type": 5,
+        "codename": "add_contenttype"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 18,
+    "fields": {
+        "name": "Can change content type",
+        "content_type": 5,
+        "codename": "change_contenttype"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 19,
+    "fields": {
+        "name": "Can delete content type",
+        "content_type": 5,
+        "codename": "delete_contenttype"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 20,
+    "fields": {
+        "name": "Can view content type",
+        "content_type": 5,
+        "codename": "view_contenttype"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 21,
+    "fields": {
+        "name": "Can add session",
+        "content_type": 6,
+        "codename": "add_session"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 22,
+    "fields": {
+        "name": "Can change session",
+        "content_type": 6,
+        "codename": "change_session"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 23,
+    "fields": {
+        "name": "Can delete session",
+        "content_type": 6,
+        "codename": "delete_session"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 24,
+    "fields": {
+        "name": "Can view session",
+        "content_type": 6,
+        "codename": "view_session"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 25,
+    "fields": {
+        "name": "Can add post",
+        "content_type": 7,
+        "codename": "add_post"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 26,
+    "fields": {
+        "name": "Can change post",
+        "content_type": 7,
+        "codename": "change_post"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 27,
+    "fields": {
+        "name": "Can delete post",
+        "content_type": 7,
+        "codename": "delete_post"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 28,
+    "fields": {
+        "name": "Can view post",
+        "content_type": 7,
+        "codename": "view_post"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 29,
+    "fields": {
+        "name": "Can add ticket",
+        "content_type": 8,
+        "codename": "add_ticket"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 30,
+    "fields": {
+        "name": "Can change ticket",
+        "content_type": 8,
+        "codename": "change_ticket"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 31,
+    "fields": {
+        "name": "Can delete ticket",
+        "content_type": 8,
+        "codename": "delete_ticket"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 32,
+    "fields": {
+        "name": "Can view ticket",
+        "content_type": 8,
+        "codename": "view_ticket"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 33,
+    "fields": {
+        "name": "Can add comment",
+        "content_type": 9,
+        "codename": "add_comment"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 34,
+    "fields": {
+        "name": "Can change comment",
+        "content_type": 9,
+        "codename": "change_comment"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 35,
+    "fields": {
+        "name": "Can delete comment",
+        "content_type": 9,
+        "codename": "delete_comment"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 36,
+    "fields": {
+        "name": "Can view comment",
+        "content_type": 9,
+        "codename": "view_comment"
+    }
+},
+{
+    "model": "auth.user",
+    "pk": 1,
+    "fields": {
+        "password": "pbkdf2_sha256$1000000$HNAgSeooIHTmxjnGs5yoIk$CDGNsDffXKl2WbQafZWa4++r2g0hUup7WzC6e8mjWd0=",
+        "last_login": "2025-07-16T08:15:05.349Z",
+        "is_superuser": true,
+        "username": "baqer",
+        "first_name": "",
+        "last_name": "",
+        "email": "mestern00@gmail.com",
+        "is_staff": true,
+        "is_active": true,
+        "date_joined": "2025-04-24T08:14:20.818Z",
+        "groups": [],
+        "user_permissions": []
+    }
+},
+{
+    "model": "auth.user",
+    "pk": 2,
+    "fields": {
+        "password": "Mamad131400",
+        "last_login": null,
+        "is_superuser": true,
+        "username": "mamad",
+        "first_name": "",
+        "last_name": " ",
+        "email": "mestern00@gmail.com",
+        "is_staff": true,
+        "is_active": true,
+        "date_joined": "2025-04-24T08:14:20.818Z",
+        "groups": [],
+        "user_permissions": []
+    }
+},
+{
+    "model": "auth.user",
+    "pk": 3,
+    "fields": {
+        "password": "!lQvxIKM7vmQRB2y54RstDvtQAqIkCF6xw4RL5yaI",
+        "last_login": null,
+        "is_superuser": false,
+        "username": "mohammad",
+        "first_name": "",
+        "last_name": "",
+        "email": "1234",
+        "is_staff": false,
+        "is_active": true,
+        "date_joined": "2025-07-09T03:36:11.440Z",
+        "groups": [],
+        "user_permissions": []
+    }
+},
+{
+    "model": "auth.user",
+    "pk": 4,
+    "fields": {
+        "password": "!vnTsleLZqTBxorFyB20GyOqzdRwfEPtZWqHmad2w",
+        "last_login": null,
+        "is_superuser": false,
+        "username": "moh",
+        "first_name": "",
+        "last_name": "",
+        "email": "",
+        "is_staff": false,
+        "is_active": true,
+        "date_joined": "2025-07-09T03:36:21.528Z",
+        "groups": [],
+        "user_permissions": []
+    }
+},
+{
+    "model": "contenttypes.contenttype",
+    "pk": 1,
+    "fields": {
+        "app_label": "admin",
+        "model": "logentry"
+    }
+},
+{
+    "model": "contenttypes.contenttype",
+    "pk": 2,
+    "fields": {
+        "app_label": "auth",
+        "model": "permission"
+    }
+},
+{
+    "model": "contenttypes.contenttype",
+    "pk": 3,
+    "fields": {
+        "app_label": "auth",
+        "model": "group"
+    }
+},
+{
+    "model": "contenttypes.contenttype",
+    "pk": 4,
+    "fields": {
+        "app_label": "auth",
+        "model": "user"
+    }
+},
+{
+    "model": "contenttypes.contenttype",
+    "pk": 5,
+    "fields": {
+        "app_label": "contenttypes",
+        "model": "contenttype"
+    }
+},
+{
+    "model": "contenttypes.contenttype",
+    "pk": 6,
+    "fields": {
+        "app_label": "sessions",
+        "model": "session"
+    }
+},
+{
+    "model": "contenttypes.contenttype",
+    "pk": 7,
+    "fields": {
+        "app_label": "app1",
+        "model": "post"
+    }
+},
+{
+    "model": "contenttypes.contenttype",
+    "pk": 8,
+    "fields": {
+        "app_label": "app1",
+        "model": "ticket"
+    }
+},
+{
+    "model": "contenttypes.contenttype",
+    "pk": 9,
+    "fields": {
+        "app_label": "app1",
+        "model": "comment"
+    }
+},
+{
+    "model": "sessions.session",
+    "pk": "2yay3cvkuisc9spfjcpwwc6oe8ybdo3u",
+    "fields": {
+        "session_data": ".eJxVjEEOwiAQRe_C2hApIwwu3XuGZpgBqRpISrsy3l2bdKHb_977LzXSupRx7WkeJ1FnZdThd4vEj1Q3IHeqt6a51WWeot4UvdOur03S87K7fweFevnWp2AIkFCytQBo8RgZkQI6B8E4oMwxGXAZOAjRYFlSMD44j4O3Aur9Ac4eN2Q:1uVyCo:00HvhFPpfVIp-9rkaT5kAx3TugNm_MJSvbQk8kmiLvw",
+        "expire_date": "2025-07-13T20:00:50.900Z"
+    }
+},
+{
+    "model": "sessions.session",
+    "pk": "5y9a14gte9s1w6kvmby8zg0qynequ5rk",
+    "fields": {
+        "session_data": ".eJxVjEEOwiAQRe_C2hApIwwu3XuGZpgBqRpISrsy3l2bdKHb_977LzXSupRx7WkeJ1FnZdThd4vEj1Q3IHeqt6a51WWeot4UvdOur03S87K7fweFevnWp2AIkFCytQBo8RgZkQI6B8E4oMwxGXAZOAjRYFlSMD44j4O3Aur9Ac4eN2Q:1ubxI9:r5SoGDiQFnRLRvC-NX7vjfx0Q4WWjTYsUCuieek5Rz4",
+        "expire_date": "2025-07-30T08:15:05.361Z"
+    }
+},
+{
+    "model": "sessions.session",
+    "pk": "6ruwngvafajp5tpeuiu7jcir03xe6dyl",
+    "fields": {
+        "session_data": ".eJxVjEEOwiAQRe_C2hApIwwu3XuGZpgBqRpISrsy3l2bdKHb_977LzXSupRx7WkeJ1FnZdThd4vEj1Q3IHeqt6a51WWeot4UvdOur03S87K7fweFevnWp2AIkFCytQBo8RgZkQI6B8E4oMwxGXAZOAjRYFlSMD44j4O3Aur9Ac4eN2Q:1uaU95:iz75rdqBm6w3hIRTJxJWtw-cQJDLNnSqNgy7NytwSDg",
+        "expire_date": "2025-07-26T06:55:39.920Z"
+    }
+},
+{
+    "model": "sessions.session",
+    "pk": "b9n1o0dd8af1uuazgurzaqu6tbt95bsd",
+    "fields": {
+        "session_data": ".eJxVjEEOwiAQRe_C2hApIwwu3XuGZpgBqRpISrsy3l2bdKHb_977LzXSupRx7WkeJ1FnZdThd4vEj1Q3IHeqt6a51WWeot4UvdOur03S87K7fweFevnWp2AIkFCytQBo8RgZkQI6B8E4oMwxGXAZOAjRYFlSMD44j4O3Aur9Ac4eN2Q:1uUUFj:4YOhCzdW91chE-EaJs42Khu5TIwOCgESCGvd1SbCo3U",
+        "expire_date": "2025-07-09T17:49:43.340Z"
+    }
+},
+{
+    "model": "sessions.session",
+    "pk": "duuz045wpvo3xsgdydyqflfq8zozxdje",
+    "fields": {
+        "session_data": ".eJxVjEEOwiAQRe_C2hApIwwu3XuGZpgBqRpISrsy3l2bdKHb_977LzXSupRx7WkeJ1FnZdThd4vEj1Q3IHeqt6a51WWeot4UvdOur03S87K7fweFevnWp2AIkFCytQBo8RgZkQI6B8E4oMwxGXAZOAjRYFlSMD44j4O3Aur9Ac4eN2Q:1uL7O3:IDjaMGHlxVxccYDE53zQ77XyaWk8siVEArIHJWW0WYA",
+        "expire_date": "2025-06-13T21:35:35.084Z"
+    }
+},
+{
+    "model": "sessions.session",
+    "pk": "no31z8yfqi6x5gi7rqk6sozwwbbp5hfx",
+    "fields": {
+        "session_data": ".eJxVjEEOwiAQRe_C2hApIwwu3XuGZpgBqRpISrsy3l2bdKHb_977LzXSupRx7WkeJ1FnZdThd4vEj1Q3IHeqt6a51WWeot4UvdOur03S87K7fweFevnWp2AIkFCytQBo8RgZkQI6B8E4oMwxGXAZOAjRYFlSMD44j4O3Aur9Ac4eN2Q:1uPR0V:63xyLHOtWqmwyc6jkoERPTFmw6e0YAejxQdf7qyXuks",
+        "expire_date": "2025-06-25T19:21:07.206Z"
+    }
+},
+{
+    "model": "sessions.session",
+    "pk": "x2ucmlp2ervqx3ks8s69orfcekmhy1a4",
+    "fields": {
+        "session_data": ".eJxVjEEOwiAQRe_C2hApIwwu3XuGZpgBqRpISrsy3l2bdKHb_977LzXSupRx7WkeJ1FnZdThd4vEj1Q3IHeqt6a51WWeot4UvdOur03S87K7fweFevnWp2AIkFCytQBo8RgZkQI6B8E4oMwxGXAZOAjRYFlSMD44j4O3Aur9Ac4eN2Q:1uNyet:wQNxA_PgWkZsdzOxh7yDX0M5_NgGO73X0VZTpavxm08",
+        "expire_date": "2025-06-21T18:52:47.941Z"
+    }
+},
+{
+    "model": "sessions.session",
+    "pk": "zgp5spazwu8amjcsg3n3wjfq9l3y9u05",
+    "fields": {
+        "session_data": ".eJxVjEEOwiAQRe_C2hApIwwu3XuGZpgBqRpISrsy3l2bdKHb_977LzXSupRx7WkeJ1FnZdThd4vEj1Q3IHeqt6a51WWeot4UvdOur03S87K7fweFevnWp2AIkFCytQBo8RgZkQI6B8E4oMwxGXAZOAjRYFlSMD44j4O3Aur9Ac4eN2Q:1uG1tE:jXD6K3wYa4unzW68bo4I8cGQISq8TWV0HmNQtmTwXnM",
+        "expire_date": "2025-05-30T20:42:44.495Z"
+    }
+},
+{
+    "model": "sessions.session",
+    "pk": "zl9wtufu8k31fhnjuhzq5yvqxgf416du",
+    "fields": {
+        "session_data": ".eJxVjEEOwiAQRe_C2hApIwwu3XuGZpgBqRpISrsy3l2bdKHb_977LzXSupRx7WkeJ1FnZdThd4vEj1Q3IHeqt6a51WWeot4UvdOur03S87K7fweFevnWp2AIkFCytQBo8RgZkQI6B8E4oMwxGXAZOAjRYFlSMD44j4O3Aur9Ac4eN2Q:1u9IVE:Qn7w6uNc6SZ1uEcnGolVqf_On_iwxf07X2S0O_cIdS0",
+        "expire_date": "2025-05-12T07:02:08.423Z"
+    }
+},
+{
+    "model": "app1.post",
+    "pk": 1,
+    "fields": {
+        "auther": 1,
+        "title": "xzxzx",
+        "image": "",
+        "description": "xz cxc",
+        "slug": "x",
+        "publish": "2025-04-24T08:15:29Z",
+        "created": "2025-04-24T08:15:50.851Z",
+        "update": "2025-04-24T08:15:50.851Z",
+        "status": "PB",
+        "file": "1",
+        "view": 0
+    }
+},
+{
+    "model": "app1.post",
+    "pk": 2,
+    "fields": {
+        "auther": 2,
+        "title": "dasdsadsa",
+        "image": "",
+        "description": "shell is well",
+        "slug": "shell",
+        "publish": "2025-04-25T11:28:32Z",
+        "created": "2025-04-25T11:28:43.169Z",
+        "update": "2025-05-02T15:11:00.637Z",
+        "status": "PB",
+        "file": "1",
+        "view": 0
+    }
+},
+{
+    "model": "app1.post",
+    "pk": 3,
+    "fields": {
+        "auther": 2,
+        "title": "asdsda",
+        "image": "",
+        "description": "shell is well",
+        "slug": "shell",
+        "publish": "2025-04-25T11:29:33Z",
+        "created": "2025-04-25T11:29:35.304Z",
+        "update": "2025-05-02T15:10:44.389Z",
+        "status": "PB",
+        "file": "1",
+        "view": 0
+    }
+},
+{
+    "model": "app1.post",
+    "pk": 4,
+    "fields": {
+        "auther": 2,
+        "title": "shell",
+        "image": "",
+        "description": "رکز سعی کنید مشکل رو خودتون حل کنید. اگه به جواب نرسیدید، می‌تونید از گوگل کمک بگیرید. اگه با خطایی مواجه \r\n\\شدید یا نیاز به نمونه‌ای داشتید، با استفاده از کلمات کلیدی مختلف توی گوگل سرچ کنید و \r\nاز سایت‌هایی مثل Stack \r\nOverflow کمک بگیرید. (جواب 99٪ سوالات با این روش زیر 5 دقیقه پیدا میشه)\r\nاز پرسیدن سوالات کلی مثل «من مثل شما انجام دادم ولی کار نکرد» یا «کد من م\r\n\r\nشکل داره و اجرا نمیشه» که جزئیات ندارن، خودداری کنید. وقتی سوال می‌پرسید، لطفاً اون رو با مستندات و به صورت شفاف و واضح بیان کنید تا قابل تحلیل و بررسی باشه. سعی کنید سوالاتتون م\r\n\r\nفهومی و دقیق باشه تا مکالمه‌ای که دارید خلاصه و مفید باشه. همچنین قبل از اینکه سوال ارسال کنید، یه بار خودتون اون رو بخ",
+        "slug": "shell",
+        "publish": "2025-05-27T15:10:05+03:30",
+        "created": "2025-04-25T15:10:05.862+03:30",
+        "update": "2025-05-31T01:10:09.906+03:30",
+        "status": "PB",
+        "file": "1",
+        "view": 0
+    }
+},
+{
+    "model": "app1.post",
+    "pk": 5,
+    "fields": {
+        "auther": 1,
+        "title": "Nina Symon",
+        "image": "posts/0_rq_QqjPJOFVQiB3H_zgjS3gn.jpg",
+        "description": "She is one of the best singers in history.",
+        "slug": "good",
+        "publish": "2025-05-31T08:05:41Z",
+        "created": "2025-05-30T21:38:20.735Z",
+        "update": "2025-07-11T08:33:46.061Z",
+        "status": "PB",
+        "file": "documents/Javad_Badizade___Shod_Khazan_320.mp3",
+        "view": 0
+    }
+},
+{
+    "model": "app1.post",
+    "pk": 6,
+    "fields": {
+        "auther": 2,
+        "title": "look at this pice of cake",
+        "image": "",
+        "description": "yu yu it's realy realy good",
+        "slug": "cake",
+        "publish": "1865-02-07T01:08:20+03:25:44",
+        "created": "2025-06-12T01:10:36.549+03:30",
+        "update": "2025-06-12T01:10:40.019+03:30",
+        "status": "PB",
+        "file": "1",
+        "view": 0
+    }
+},
+{
+    "model": "app1.post",
+    "pk": 7,
+    "fields": {
+        "auther": 1,
+        "title": "error 404",
+        "image": "",
+        "description": "404 error \r\npage not found",
+        "slug": "404",
+        "publish": "2646-09-16T21:19:52+03:30",
+        "created": "2025-06-25T21:21:23.226+03:30",
+        "update": "2025-06-25T21:21:23.226+03:30",
+        "status": "DF",
+        "file": "1",
+        "view": 0
+    }
+},
+{
+    "model": "app1.post",
+    "pk": 8,
+    "fields": {
+        "auther": 2,
+        "title": "anathema | fragile dreams",
+        "image": "posts/artworks-000053199906-wwfzws-t500x500.jpg",
+        "description": "Countless times I trusted you\r\nI let you back in\r\nKnowing, learning, you know\r\nI should have run, but I stayed\r\nMaybe I always knew\r\nMy fragile dreams would be broken for you\r\nToday I introduced myself\r\nTo my own feelings\r\nIn silent agony, after all these years\r\nThey spoke to me after all these years\r\nMaybe I always knew\r\nMy fragile dreams would be broken for you",
+        "slug": "anatheam",
+        "publish": "2026-07-04T08:03:23Z",
+        "created": "2025-06-29T20:02:55.250Z",
+        "update": "2025-07-29T11:07:33.511Z",
+        "status": "PB",
+        "file": "documents/avatars-bbQcp37L2cB6SZ0j-BtTzhQ-t1080x1080.rar",
+        "view": 10
+    }
+},
+{
+    "model": "app1.post",
+    "pk": 9,
+    "fields": {
+        "auther": 1,
+        "title": "dsaddsads",
+        "image": "",
+        "description": "dsdasa",
+        "slug": "dsda",
+        "publish": "2646-09-24T21:53:25+03:30",
+        "created": "2025-07-02T21:53:39.626+03:30",
+        "update": "2025-07-02T21:53:39.626+03:30",
+        "status": "DF",
+        "file": "1",
+        "view": 0
+    }
+},
+{
+    "model": "app1.post",
+    "pk": 10,
+    "fields": {
+        "auther": 1,
+        "title": "dsasd",
+        "image": "posts/0_rq_QqjPJOFVQiB3H.jpg",
+        "description": "dsadsdasd",
+        "slug": "dasdasd",
+        "publish": "2646-09-25T03:43:57+03:30",
+        "created": "2025-07-03T03:44:12.829+03:30",
+        "update": "2025-07-07T10:33:35.901+03:30",
+        "status": "DF",
+        "file": "1",
+        "view": 0
+    }
+},
+{
+    "model": "app1.post",
+    "pk": 11,
+    "fields": {
+        "auther": 1,
+        "title": "creatae",
+        "image": "",
+        "description": "",
+        "slug": "",
+        "publish": "2025-07-09T05:05:59.420Z",
+        "created": "2025-07-09T08:35:59.420+03:30",
+        "update": "2025-07-09T08:35:59.420+03:30",
+        "status": "DF",
+        "file": "",
+        "view": 0
+    }
+},
+{
+    "model": "app1.post",
+    "pk": 12,
+    "fields": {
+        "auther": 1,
+        "title": "success",
+        "image": "",
+        "description": "sd",
+        "slug": "",
+        "publish": "2025-07-11T09:25:18.417Z",
+        "created": "2025-07-11T09:25:18.418Z",
+        "update": "2025-07-11T09:25:18.418Z",
+        "status": "DF",
+        "file": "",
+        "view": 0
+    }
+},
+{
+    "model": "app1.post",
+    "pk": 13,
+    "fields": {
+        "auther": 1,
+        "title": "last hope",
+        "image": "",
+        "description": "ds",
+        "slug": "",
+        "publish": "2025-07-11T09:26:01.203Z",
+        "created": "2025-07-11T09:26:01.203Z",
+        "update": "2025-07-11T09:26:01.203Z",
+        "status": "DF",
+        "file": "",
+        "view": 0
+    }
+},
+{
+    "model": "app1.post",
+    "pk": 14,
+    "fields": {
+        "auther": 1,
+        "title": "yess",
+        "image": "",
+        "description": "dsa",
+        "slug": "",
+        "publish": "2025-07-11T13:44:33.150Z",
+        "created": "2025-07-11T13:44:33.151Z",
+        "update": "2025-07-11T13:44:33.151Z",
+        "status": "DF",
+        "file": "",
+        "view": 0
+    }
+},
+{
+    "model": "app1.post",
+    "pk": 15,
+    "fields": {
+        "auther": 1,
+        "title": "yess",
+        "image": "",
+        "description": "dsa",
+        "slug": "",
+        "publish": "2025-07-11T13:44:37.817Z",
+        "created": "2025-07-11T13:44:37.817Z",
+        "update": "2025-07-11T13:44:37.817Z",
+        "status": "DF",
+        "file": "",
+        "view": 0
+    }
+},
+{
+    "model": "app1.post",
+    "pk": 16,
+    "fields": {
+        "auther": 1,
+        "title": "Jat upload",
+        "image": "",
+        "description": "Ss",
+        "slug": "",
+        "publish": "2025-07-13T17:56:35.338Z",
+        "created": "2025-07-13T17:56:35.338Z",
+        "update": "2025-07-13T17:57:20.748Z",
+        "status": "PB",
+        "file": "",
+        "view": 0
+    }
+},
+{
+    "model": "app1.ticket",
+    "pk": 6,
+    "fields": {
+        "name": "dsa",
+        "subject": "SUG",
+        "phone": "dasdsasadsa",
+        "email": "dsadsadasdsadsadsaddsasdsa",
+        "message": "dsadsadsa",
+        "publish": "2024-04-04T00:00:00+03:30"
+    }
+},
+{
+    "model": "app1.ticket",
+    "pk": 7,
+    "fields": {
+        "name": "sds",
+        "subject": "SUG",
+        "phone": "dsa",
+        "email": "dsa",
+        "message": "das",
+        "publish": "2024-04-04T00:00:00+03:30"
+    }
+},
+{
+    "model": "app1.ticket",
+    "pk": 8,
+    "fields": {
+        "name": "dsada",
+        "subject": "CRT",
+        "phone": "dsadsadsad",
+        "email": "dsdasa@gmail.com",
+        "message": "dsadas",
+        "publish": "2024-04-04T00:00:00+03:30"
+    }
+},
+{
+    "model": "app1.ticket",
+    "pk": 9,
+    "fields": {
+        "name": "dsada",
+        "subject": "CRT",
+        "phone": "dsadsadsad",
+        "email": "dsdasa@gmail.com",
+        "message": "dsadas",
+        "publish": "2024-04-04T00:00:00+03:30"
+    }
+},
+{
+    "model": "app1.ticket",
+    "pk": 10,
+    "fields": {
+        "name": "dsada",
+        "subject": "CRT",
+        "phone": "dsadsadsad",
+        "email": "dsdasa@gmail.com",
+        "message": "dsadas",
+        "publish": "2024-04-04T00:00:00+03:30"
+    }
+},
+{
+    "model": "app1.ticket",
+    "pk": 11,
+    "fields": {
+        "name": "mohammad",
+        "subject": "CRT",
+        "phone": "09919679629",
+        "email": "mestern00@gmail.com",
+        "message": "dhiasdoisja",
+        "publish": "2025-07-03T00:00:00+03:30"
+    }
+},
+{
+    "model": "app1.ticket",
+    "pk": 12,
+    "fields": {
+        "name": "محمدباقر شاطر",
+        "subject": "REP",
+        "phone": "12244656565",
+        "email": "dsasadsdt@gmail.com",
+        "message": "jnjnk",
+        "publish": "2025-07-03T00:00:00+03:30"
+    }
+},
+{
+    "model": "app1.ticket",
+    "pk": 13,
+    "fields": {
+        "name": "baqer",
+        "subject": "REP",
+        "phone": "09919679629",
+        "email": "dsasadsd@gmail.yao",
+        "message": "kfmkdsmkfds",
+        "publish": "2025-07-03T00:00:00+03:30"
+    }
+},
+{
+    "model": "app1.ticket",
+    "pk": 14,
+    "fields": {
+        "name": "sad",
+        "subject": "REP",
+        "phone": "dsakldmsa",
+        "email": "mnsda@gmail.com",
+        "message": "dsads",
+        "publish": "2024-04-04T00:00:00+03:30"
+    }
+},
+{
+    "model": "app1.ticket",
+    "pk": 15,
+    "fields": {
+        "name": "sad",
+        "subject": "REP",
+        "phone": "dsakldmsa",
+        "email": "mnsda@gmail.com",
+        "message": "dsads",
+        "publish": "2024-04-04T00:00:00+03:30"
+    }
+},
+{
+    "model": "app1.ticket",
+    "pk": 16,
+    "fields": {
+        "name": "sad",
+        "subject": "REP",
+        "phone": "dsakldmsa",
+        "email": "mnsda@gmail.com",
+        "message": "dsads",
+        "publish": "2024-04-04T00:00:00+03:30"
+    }
+},
+{
+    "model": "app1.ticket",
+    "pk": 17,
+    "fields": {
+        "name": "ds",
+        "subject": "SUG",
+        "phone": "dsa",
+        "email": "",
+        "message": "dsa",
+        "publish": "2024-04-04T00:00:00+03:30"
+    }
+},
+{
+    "model": "app1.ticket",
+    "pk": 18,
+    "fields": {
+        "name": "ds",
+        "subject": "SUG",
+        "phone": "12321",
+        "email": "",
+        "message": "dsa",
+        "publish": "2024-04-04T00:00:00+03:30"
+    }
+},
+{
+    "model": "app1.comment",
+    "pk": 1,
+    "fields": {
+        "post": 5,
+        "name": "mohammad",
+        "message": "goh to in ashqalgoh to in ashqalgoh to in ashqalgoh to in ashqalgoh to in ashqalgoh to in ashqalgoh to in ashqalgoh to in ashqalgoh to in ashqalgoh to in ashqalgoh to in ashqalgoh to in ashqalgoh to in ashqalgoh to in ashqalgoh to in ashqalgoh to in ashqalgoh to in ashqalgoh to in ashqalgoh to in ashqalgoh to in ashqalgoh to in ashqalgoh to in ashqalgoh to in ashqalgoh to in ashqalgoh to in ashqalgoh to in ashqalgoh to in ashqalgoh to in ashqalgoh to in ashqalgoh to in ashqalgoh to in ashqalgoh to in ashqalgoh to in ashqal",
+        "created": "2025-07-09T09:29:26.966Z",
+        "updated": "2025-07-09T09:30:46.967Z",
+        "active": true
+    }
+},
+{
+    "model": "app1.comment",
+    "pk": 2,
+    "fields": {
+        "post": 8,
+        "name": "das",
+        "message": "das",
+        "created": "2025-07-16T08:14:44.925Z",
+        "updated": "2025-07-16T08:14:44.925Z",
+        "active": true
+    }
+},
+{
+    "model": "app1.comment",
+    "pk": 3,
+    "fields": {
+        "post": 3,
+        "name": "post 3",
+        "message": "sda",
+        "created": "2025-07-16T08:29:51.822Z",
+        "updated": "2025-07-16T08:29:51.822Z",
+        "active": true
+    }
+},
+{
+    "model": "app1.comment",
+    "pk": 4,
+    "fields": {
+        "post": 3,
+        "name": "post 3",
+        "message": "sda",
+        "created": "2025-07-16T08:29:53.551Z",
+        "updated": "2025-07-16T08:29:53.551Z",
+        "active": true
+    }
+},
+{
+    "model": "app1.comment",
+    "pk": 5,
+    "fields": {
+        "post": 3,
+        "name": "post 3",
+        "message": "sda",
+        "created": "2025-07-16T08:29:54.817Z",
+        "updated": "2025-07-16T08:29:54.817Z",
+        "active": true
+    }
+},
+{
+    "model": "app1.comment",
+    "pk": 7,
+    "fields": {
+        "post": 5,
+        "name": "ds",
+        "message": "dsa",
+        "created": "2025-07-16T13:18:46.882Z",
+        "updated": "2025-07-16T13:18:46.882Z",
+        "active": true
+    }
+},
+{
+    "model": "app1.comment",
+    "pk": 8,
+    "fields": {
+        "post": 5,
+        "name": "baqer",
+        "message": "das",
+        "created": "2025-07-16T13:25:12.959Z",
+        "updated": "2025-07-16T13:25:12.959Z",
+        "active": true
+    }
+},
+{
+    "model": "app1.comment",
+    "pk": 9,
+    "fields": {
+        "post": 5,
+        "name": "ahmad",
+        "message": "ashqal",
+        "created": "2025-07-16T13:28:11.499Z",
+        "updated": "2025-07-16T13:28:11.499Z",
+        "active": true
+    }
+},
+{
+    "model": "app1.comment",
+    "pk": 10,
+    "fields": {
+        "post": 5,
+        "name": "ahmad",
+        "message": "ashqal",
+        "created": "2025-07-16T13:28:42.217Z",
+        "updated": "2025-07-16T13:28:42.217Z",
+        "active": true
+    }
+},
+{
+    "model": "app1.comment",
+    "pk": 11,
+    "fields": {
+        "post": 5,
+        "name": "ahmad",
+        "message": "ashqal",
+        "created": "2025-07-16T13:28:58.770Z",
+        "updated": "2025-07-16T13:28:58.770Z",
+        "active": true
+    }
+},
+{
+    "model": "app1.comment",
+    "pk": 12,
+    "fields": {
+        "post": 5,
+        "name": "ahmad",
+        "message": "ashqal",
+        "created": "2025-07-16T13:29:01.770Z",
+        "updated": "2025-07-16T13:29:01.770Z",
+        "active": true
+    }
+},
+{
+    "model": "app1.comment",
+    "pk": 13,
+    "fields": {
+        "post": 5,
+        "name": "ahmad",
+        "message": "ashqal",
+        "created": "2025-07-16T13:29:11.979Z",
+        "updated": "2025-07-16T13:29:11.979Z",
+        "active": true
+    }
+},
+{
+    "model": "app1.comment",
+    "pk": 14,
+    "fields": {
+        "post": 5,
+        "name": "ahmad",
+        "message": "dsa",
+        "created": "2025-07-16T13:35:06.048Z",
+        "updated": "2025-07-16T13:35:06.048Z",
+        "active": true
+    }
+},
+{
+    "model": "app1.comment",
+    "pk": 15,
+    "fields": {
+        "post": 5,
+        "name": "das",
+        "message": "dsa",
+        "created": "2025-07-16T13:35:12.113Z",
+        "updated": "2025-07-16T13:35:12.113Z",
+        "active": true
+    }
+},
+{
+    "model": "app1.comment",
+    "pk": 16,
+    "fields": {
+        "post": 5,
+        "name": "das",
+        "message": "dsa",
+        "created": "2025-07-16T13:35:58.777Z",
+        "updated": "2025-07-16T13:35:58.777Z",
+        "active": true
+    }
+},
+{
+    "model": "app1.comment",
+    "pk": 17,
+    "fields": {
+        "post": 8,
+        "name": "d",
+        "message": "d",
+        "created": "2025-07-16T13:42:53.368Z",
+        "updated": "2025-07-16T13:42:53.368Z",
+        "active": true
+    }
+},
+{
+    "model": "app1.comment",
+    "pk": 18,
+    "fields": {
+        "post": 5,
+        "name": "mmmm",
+        "message": "salam",
+        "created": "2025-07-17T11:25:26.931Z",
+        "updated": "2025-07-17T11:25:26.931Z",
+        "active": true
+    }
+},
+{
+    "model": "app1.comment",
+    "pk": 19,
+    "fields": {
+        "post": 5,
+        "name": "baqer",
+        "message": "shater",
+        "created": "2025-07-20T15:22:04.605Z",
+        "updated": "2025-07-20T15:22:04.607Z",
+        "active": true
+    }
+},
+{
+    "model": "app1.comment",
+    "pk": 20,
+    "fields": {
+        "post": 5,
+        "name": "baqer",
+        "message": "shater",
+        "created": "2025-07-20T15:41:35.136Z",
+        "updated": "2025-07-20T15:41:35.136Z",
+        "active": true
+    }
+},
+{
+    "model": "app1.comment",
+    "pk": 21,
+    "fields": {
+        "post": 5,
+        "name": "hala",
+        "message": "has",
+        "created": "2025-07-20T15:41:53.567Z",
+        "updated": "2025-07-20T15:41:53.567Z",
+        "active": true
+    }
+},
+{
+    "model": "app1.comment",
+    "pk": 22,
+    "fields": {
+        "post": 5,
+        "name": "hala",
+        "message": "has",
+        "created": "2025-07-20T15:42:30.753Z",
+        "updated": "2025-07-20T15:42:30.753Z",
+        "active": true
+    }
+},
+{
+    "model": "app1.comment",
+    "pk": 23,
+    "fields": {
+        "post": 5,
+        "name": "hala",
+        "message": "has",
+        "created": "2025-07-20T15:43:07.522Z",
+        "updated": "2025-07-20T15:43:07.522Z",
+        "active": true
+    }
+},
+{
+    "model": "app1.comment",
+    "pk": 24,
+    "fields": {
+        "post": 5,
+        "name": "jadid",
+        "message": "asda",
+        "created": "2025-07-20T15:43:15.625Z",
+        "updated": "2025-07-20T15:43:15.625Z",
+        "active": true
+    }
+},
+{
+    "model": "app1.comment",
+    "pk": 25,
+    "fields": {
+        "post": 5,
+        "name": "salam",
+        "message": "dsa",
+        "created": "2025-07-20T15:45:24.760Z",
+        "updated": "2025-07-20T15:45:24.760Z",
+        "active": true
+    }
+},
+{
+    "model": "app1.comment",
+    "pk": 26,
+    "fields": {
+        "post": 5,
+        "name": "sasdasd",
+        "message": "dasaa",
+        "created": "2025-07-20T15:46:11.126Z",
+        "updated": "2025-07-20T15:46:11.126Z",
+        "active": true
+    }
+},
+{
+    "model": "app1.comment",
+    "pk": 27,
+    "fields": {
+        "post": 5,
+        "name": "1",
+        "message": "dsa",
+        "created": "2025-07-20T15:46:38.845Z",
+        "updated": "2025-07-20T15:46:38.845Z",
+        "active": true
+    }
+},
+{
+    "model": "app1.comment",
+    "pk": 28,
+    "fields": {
+        "post": 5,
+        "name": "salamdd",
+        "message": "das",
+        "created": "2025-07-20T15:46:48.086Z",
+        "updated": "2025-07-20T15:46:48.086Z",
+        "active": true
+    }
+},
+{
+    "model": "app1.comment",
+    "pk": 29,
+    "fields": {
+        "post": 5,
+        "name": "salam",
+        "message": "dd",
+        "created": "2025-07-20T15:48:24.167Z",
+        "updated": "2025-07-20T15:48:24.167Z",
+        "active": true
+    }
+},
+{
+    "model": "app1.comment",
+    "pk": 30,
+    "fields": {
+        "post": 5,
+        "name": "sasdasddsad",
+        "message": "dsasa",
+        "created": "2025-07-20T15:48:58.209Z",
+        "updated": "2025-07-20T15:48:58.209Z",
+        "active": true
+    }
+},
+{
+    "model": "app1.comment",
+    "pk": 31,
+    "fields": {
+        "post": 5,
+        "name": "new new new",
+        "message": "dsas",
+        "created": "2025-07-20T15:54:10.827Z",
+        "updated": "2025-07-20T15:54:10.827Z",
+        "active": true
+    }
+},
+{
+    "model": "app1.comment",
+    "pk": 32,
+    "fields": {
+        "post": 5,
+        "name": "salam123432",
+        "message": "dd",
+        "created": "2025-07-21T19:40:45.756Z",
+        "updated": "2025-07-21T19:40:45.756Z",
+        "active": true
+    }
+},
+{
+    "model": "app1.comment",
+    "pk": 33,
+    "fields": {
+        "post": 5,
+        "name": "kkkkkkkkkkkkkkkkkkkkkkkkkkkkkk",
+        "message": "ddd",
+        "created": "2025-07-22T19:58:42.751Z",
+        "updated": "2025-07-22T19:58:42.751Z",
+        "active": true
+    }
+},
+{
+    "model": "app1.comment",
+    "pk": 34,
+    "fields": {
+        "post": 8,
+        "name": "dss",
+        "message": "# jdsasa",
+        "created": "2025-07-29T11:20:51.404Z",
+        "updated": "2025-07-29T11:20:51.404Z",
+        "active": true
+    }
+},
+{
+    "model": "app1.comment",
+    "pk": 35,
+    "fields": {
+        "post": 8,
+        "name": "eqw",
+        "message": "<h1>ddsas</h1>",
+        "created": "2025-07-29T11:22:22.043Z",
+        "updated": "2025-07-29T11:22:22.043Z",
+        "active": true
+    }
+},
+{
+    "model": "app1.comment",
+    "pk": 36,
+    "fields": {
+        "post": 8,
+        "name": "ds",
+        "message": "{% extends 'parent/base.html' %}\r\n{% block title %}object_lists{% endblock %}\r\n{% load static %}\r\n{% load tags %}\r\n{% block content %}\r\n<link rel=\"stylesheet\" href=\"{% static 'css/posts.css' %}\">\r\n<div class=\"posts-container\">\r\n  {% for object in object_list %}\r\n    <a href=\"{% url 'app1:post_details' object.id %}\">\r\n\r\n        <div class=\"post-card\">\r\n          {% if object.image %}\r\n            <img src=\"{{ object.image.url }}\" alt=\"post image\" class=\"post-img\">\r\n          {% endif %}\r\n          <div class=\"post-content\">\r\n            <h2>{{ object.title }}</h2>\r\n            <p>{{ object.description|truncatewords:30}}</p>\r\n            <span class=\"timestamp\">{{ object.publish | date }}</span>\r\n          </div>\r\n        </div>\r\n    </a>\r\n  {% empty %}\r\n    <p>No post yet.</p>\r\n  {% endfor %}\r\n</div>\r\n    {% comment_count 5 %}\r\n{% endblock %}",
+        "created": "2025-07-29T11:22:45.689Z",
+        "updated": "2025-07-29T11:22:45.689Z",
+        "active": true
+    }
+},
+{
+    "model": "app1.comment",
+    "pk": 37,
+    "fields": {
+        "post": 8,
+        "name": "ds",
+        "message": "<a href=\"{% url 'app1:post_details' object.id %}\">",
+        "created": "2025-07-29T11:23:40.386Z",
+        "updated": "2025-07-29T11:23:40.386Z",
+        "active": true
+    }
+},
+{
+    "model": "app1.comment",
+    "pk": 38,
+    "fields": {
+        "post": 8,
+        "name": "d",
+        "message": "d",
+        "created": "2025-07-29T18:49:51.959Z",
+        "updated": "2025-07-29T18:49:51.959Z",
+        "active": true
+    }
+}
+]

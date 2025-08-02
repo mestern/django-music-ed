@@ -30,6 +30,7 @@ class Post(models.Model):
     update = models.DateTimeField(auto_now=True)
     status = models.CharField(max_length=250, choices=Status.choices, default=Status.DRAFT)
     file = models.FileField(upload_to='documents/', blank=True, null=True, )
+    view = models. PositiveIntegerField()
 
 
     objects = models.Manager()
@@ -91,5 +92,5 @@ class Comment(models.Model):
     class Meta:
         ordering = ['name']
         indexes = [
-            models.Index(fields=['name'])
-            ]
+            models.Index(fields=['-created'])
+        ]

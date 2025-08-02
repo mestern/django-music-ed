@@ -1,3 +1,4 @@
+from django.template.defaulttags import url
 from django.utils import timezone
 from django.contrib.auth.models import User
 from django.views.decorators.http import require_POST
@@ -5,7 +6,7 @@ from django.views.generic import ListView, DetailView, FormView, CreateView
 from django.shortcuts import render, get_object_or_404, redirect
 from django.http import HttpResponse, Http404
 from .models import Post, Ticket
-from .forms import TicketForm, PostCreateForm, CommentFrom
+from .forms import TicketForm, PostCreateForm, CommentFrom, SearchForm
 
 
 def index(request):
@@ -104,9 +105,26 @@ def post_comment(request, pk):
         comment = form.save(commit=False)
         comment.post = post
         comment.save()
-        context = {
-            'post': post,
-            'form': form,
-            'comment': comment,
-        }
+        return redirect("app1:post_details", pk)
+    context = {
+        'post': post,
+        'form': form,
+        'comment': comment,
+    }
     return render(request, 'forms/comment.html', context)
+
+
+def post_search(request):
+    query = None
+    results = []
+    if 'query' in request.GET:
+        form = SearchForm(data=request.GET)
+        if form.is_valid():
+            query = form.cleaned_data['query']
+            results = Post.published.filter(title__icontains=query)
+    context = {
+        'query': query,
+        'object_list': results,
+    }
+    print(results)
+    return render(request, 'app1/posts.html', context)
