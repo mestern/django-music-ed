@@ -7,13 +7,8 @@ making music discovery effortless and fun.
 
 ✨ Features
   🎼 Upload Music – Share your music with the community using post uploads with descriptions and tags.
-  
   💬 Comment System – Interact with other users’ tracks through comments.
-  
   🔍 Explore System – Personalized recommendations based on your taste.
-  
   👤 User Profiles – Showcase your uploads, liked songs, and activity.
-  
   🎯 Search & Filter – Find music by genre, artist, or tags.
-  
   📱 Responsive Design – Works smoothly on desktop and mobile.
