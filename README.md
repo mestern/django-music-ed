@@ -1,4 +1,4 @@
-#🎵 FizzyNest – Share & Discover Music
+# 🎵 FizzyNest – Share & Discover Music
 
 **FizzyNest** is a **Django-powered** music-sharing platform where users can:
 
