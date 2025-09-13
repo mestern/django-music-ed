@@ -6,21 +6,37 @@
 {% block content %}
 <link rel="stylesheet" href="{% static 'css/post_detail.css' %}">
 
+
 <div class="post-container">
+    <script src="{% static "js/post_details.js" %}" defer></script>
     <h1 class="post-title">{{ post.title }}</h1>
 
-    {% if post.image %}
-        <img src="{{ post.image.url }}" alt="{{ post.title }}" class="post-image">
+       {% if images %}
+      <div class="image-slider">
+        <button class="nav-btn prev-btn" onclick="prevImage()">&#10094;</button>
+        <div class="image-wrapper">
+          {% for img in images %}
+            <img src="{{ img.image.url }}" alt="{{ post.title }}" class="post-image slider-image {% if forloop.first %}active{% endif %}">
+          {% endfor %}
+        </div>
+        <button class="nav-btn next-btn" onclick="nextImage()">&#10095;</button>
+      </div>
     {% endif %}
+
 
     <p class="post-author">By: {{ post.auther }}</p>
 
     <div class="post-description">
         {{ post.description|linebreaks }}
-        <a href={{ post.file.url }}>Download</a>
+        {% if post.file %}
+          <a href={{ post.file.url }}>Download</a>
+            {% music_player post.file.url %}
+            {% trends post.file.url %}
+        {% endif %}
+
+        {% lorem %}
     </div>
-    {% music_player post.file.url %}
-    {% trends post.file.url %}
+
        <p class="post-date">Published: {{ post.publish }}</p>
 </div>
 

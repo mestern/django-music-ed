@@ -6,3 +6,5 @@ class App1Config(AppConfig):
     name = 'app1'
     # for Persian localization app name in the admin panel
     # verbose_name = 'بلاگ'
+
+
