@@ -3,7 +3,7 @@ from django import forms
 from django.shortcuts import get_object_or_404
 
 # import my models from models.py
-from .models import Post, Comment
+from .models import *
 
 # give me accesses to users data in database
 from django.contrib.auth.models import User
@@ -20,7 +20,6 @@ class TicketForm(forms.Form):
     phone = forms.CharField(max_length=11, required=True)
     email = forms.EmailField(max_length=250, required=False)
     message = forms.CharField(widget=forms.Textarea, required=True)
-    publish = forms.DateTimeField()
 
     def clean_phone(self):
         phone = self.cleaned_data['phone']
@@ -32,24 +31,29 @@ class TicketForm(forms.Form):
 
 
 # make a form using froms.Form
-class PostCreateForm(forms.Form):
+class PostCreateForm(forms.ModelForm):
+    image = forms.ImageField()
+    class Meta:
+        model=Post
+        fields = ['title', 'description', 'file']
+
     # I need to define each field
-    auth = forms.CharField(max_length=50, required=True)
-    image = forms.ImageField(required=False)
-    title = forms.CharField(max_length=30, required=True)
-    description = forms.CharField(widget=forms.Textarea, required=True)
-    file = forms.FileField(required=False)
+    # title = forms.CharField(max_length=30, required=True)
+    #
+    # description = forms.CharField(widget=forms.Textarea, required=True)
+    # file = forms.FileField(required=False)
+    #
 
     # a custom validation :
-    def clean_auth(self):
-        auth = self.cleaned_data['auth']
-        if auth:
-            try:
-                User.objects.get(username=auth)
-                return auth
-
-            except:
-                raise forms.ValidationError('Enter a Valid username')
+    # def clean_auth(self):
+    #     auth = self.cleaned_data['auth']
+    #     if auth:
+    #         try:
+    #             User.objects.get(username=auth)
+    #             return auth
+    #
+    #         except:
+    #             raise forms.ValidationError('Enter a Valid username')
 
 
 # make a form using forms.ModelForm
@@ -78,3 +82,14 @@ class CommentFrom(forms.ModelForm):
 
 class SearchForm(forms.Form):
     query = forms.CharField()
+
+
+# class ImageForm(forms.ModelForm):
+#     class Meta:
+#         model = Image
+#         fields = ['image', ]
+
+
+class LoginForm(forms.Form):
+    username = forms.CharField(max_length=30, required=True)
+    password = forms.CharField(max_length=50, required=True)

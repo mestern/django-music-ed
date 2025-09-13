@@ -1,0 +1,15 @@
+{% load static %}
+
+<link rel='stylesheet' type="text/css", href={% static "css/messages.css" %}>
+<script src={% static "js/messages.js" %}></script>
+
+
+{% if messages %}
+<div id="popup-message">
+    {% for message in messages %}
+        <div class="popup {{ message.tags }}">
+            {{ message }}
+        </div>
+    {% endfor %}
+</div>
+{% endif %}

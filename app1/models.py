@@ -1,8 +1,15 @@
 from django.db import models
+from django.dispatch import receiver
 from django.urls import reverse
 from django.utils import timezone
 from django.contrib.auth.models import User
-from django_jalali.db import models as jalali
+from django.db.models.signals import post_delete
+import os
+
+from django.template.defaultfilters import slugify
+
+
+# from django_jalali.db import models as jalali
 
 
 class PublishedManager(models.Manager):
@@ -19,9 +26,9 @@ class Post(models.Model):
 
     auther = models.ForeignKey(User, on_delete=models.CASCADE, related_name='user_posts')
     title = models.CharField(max_length=250)
-    image = models.ImageField(upload_to='posts/', blank=True, null=True)
+    # image = models.ImageField(upload_to='posts/', blank=True, null=True)
     description = models.TextField()
-    slug = models.SlugField()
+    slug = models.SlugField(blank=True)
     # publish = jalali.jDateTimeField(default=timezone.now)
     publish = models.DateTimeField(default=timezone.now)
     # created = jalali.jDateTimeField(auto_now_add=True)
@@ -30,8 +37,7 @@ class Post(models.Model):
     update = models.DateTimeField(auto_now=True)
     status = models.CharField(max_length=250, choices=Status.choices, default=Status.DRAFT)
     file = models.FileField(upload_to='documents/', blank=True, null=True, )
-    view = models. PositiveIntegerField()
-
+    view = models.PositiveIntegerField(default=0)
 
     objects = models.Manager()
     # objects = jalali.jManager()
@@ -46,6 +52,17 @@ class Post(models.Model):
         # verbose_name = "پست"
         # chon jame post to minevesht (posts) bayad jamesh ro taqir dad
         # verbose_name_plural = "پست ها"
+
+    # def delete(self, using=None, keep_parents=False):
+    #     if pre_delete:
+    #         print("sig", "*"*30)
+
+    def get_images(self):
+        return Image.objects.filter(post=self)
+
+    def save(self, *args, **kwargs):
+        self.slug = slugify(self.title)
+        super().save(*args, **kwargs)
 
     def __str__(self):
         return self.title
@@ -67,6 +84,7 @@ class Ticket(models.Model):
     email = models.CharField(max_length=250)
     message = models.TextField()
     publish = models.DateTimeField(default=timezone.now)
+
     # publish = jalali.jDateTimeField(default=jalali.timezone.now)
 
     def __str__(self):
@@ -94,3 +112,22 @@ class Comment(models.Model):
         indexes = [
             models.Index(fields=['-created'])
         ]
+
+
+
+class Image(models.Model):
+    post = models.ForeignKey(Post, on_delete=models.CASCADE, related_name='image')
+    image = models.ImageField(blank=True, upload_to='posts')
+    title = models.CharField(max_length=50)
+    created = models.DateTimeField(auto_now_add=True)
+
+    @receiver(post_delete)
+    def pre_delete(sender, instance, **kwargs):
+        if isinstance(instance, Image):
+            if instance.image:  # Replace your_file_field with the name of your FileField/ImageField
+                instance.image.delete(save=False)
+
+
+
+
+
