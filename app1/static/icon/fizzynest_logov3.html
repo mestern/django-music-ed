@@ -1,0 +1,400 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fizzynest Minimal Logo Icons</title>
+    <style>
+        *, *::before, *::after { 
+            box-sizing: border-box; 
+        }
+
+        body {
+            margin: 0;
+            padding: 40px;
+            background-color: #121212;
+            display: flex;
+            flex-direction: column;
+            gap: 40px;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            color: #e0e0e0;
+        }
+
+        .logo-showcase {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 30px;
+            width: 100%;
+            max-width: 800px;
+        }
+
+        .logo-option {
+            background-color: #1e1e1e;
+            border-radius: 21px;
+            padding: 30px;
+            text-align: center;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 15px;
+        }
+
+        .logo-title {
+            color: #4cafef;
+            font-size: 0.9rem;
+            font-weight: 500;
+            margin: 0;
+        }
+
+        /* Option 1: Sound Wave with Bubbles */
+        .logo-wave {
+            width: 80px;
+            height: 80px;
+            position: relative;
+            display: flex;
+            align-items: flex-end;
+            justify-content: center;
+            gap: 3px;
+            padding: 15px;
+            border-radius: 16px;
+            background: rgba(76, 175, 239, 0.1);
+        }
+
+        .wave-bar {
+            width: 4px;
+            background: #4cafef;
+            border-radius: 2px;
+            animation: wave 1.5s ease-in-out infinite;
+        }
+
+        .wave-bar:nth-child(1) { height: 20px; animation-delay: 0s; }
+        .wave-bar:nth-child(2) { height: 35px; animation-delay: 0.1s; }
+        .wave-bar:nth-child(3) { height: 25px; animation-delay: 0.2s; }
+        .wave-bar:nth-child(4) { height: 40px; animation-delay: 0.3s; }
+        .wave-bar:nth-child(5) { height: 30px; animation-delay: 0.4s; }
+        .wave-bar:nth-child(6) { height: 20px; animation-delay: 0.5s; }
+
+        .bubble {
+            position: absolute;
+            width: 6px;
+            height: 6px;
+            background: #4cafef;
+            border-radius: 50%;
+            opacity: 0;
+            animation: bubble-rise 2s ease-in-out infinite;
+        }
+
+        .bubble:nth-child(7) { bottom: 50px; left: 20px; animation-delay: 0s; }
+        .bubble:nth-child(8) { bottom: 45px; right: 15px; animation-delay: 1s; }
+
+        @keyframes wave {
+            0%, 100% { transform: scaleY(1); opacity: 0.7; }
+            50% { transform: scaleY(1.4); opacity: 1; }
+        }
+
+        @keyframes bubble-rise {
+            0% { opacity: 0; transform: translateY(0px) scale(0.5); }
+            50% { opacity: 1; transform: translateY(-15px) scale(1); }
+            100% { opacity: 0; transform: translateY(-30px) scale(0.3); }
+        }
+
+        /* Option 2: Musical Note with Fizz */
+        .logo-note {
+            width: 80px;
+            height: 80px;
+            position: relative;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 16px;
+            background: rgba(76, 175, 239, 0.1);
+        }
+
+        .note {
+            width: 24px;
+            height: 24px;
+            background: #4cafef;
+            border-radius: 50% 50% 50% 0;
+            transform: rotate(-45deg);
+            position: relative;
+        }
+
+        .note::after {
+            content: '';
+            position: absolute;
+            right: -2px;
+            top: -20px;
+            width: 3px;
+            height: 35px;
+            background: #4cafef;
+            border-radius: 2px;
+        }
+
+        .fizz-particle {
+            position: absolute;
+            width: 3px;
+            height: 3px;
+            background: #4cafef;
+            border-radius: 50%;
+            opacity: 0;
+            animation: fizz-float 2.5s ease-in-out infinite;
+        }
+
+        .fizz-particle:nth-child(2) { top: 15px; right: 25px; animation-delay: 0s; }
+        .fizz-particle:nth-child(3) { top: 25px; right: 15px; animation-delay: 0.8s; }
+        .fizz-particle:nth-child(4) { top: 35px; right: 30px; animation-delay: 1.6s; }
+
+        @keyframes fizz-float {
+            0% { opacity: 0; transform: translateY(0px) scale(0.5); }
+            50% { opacity: 1; transform: translateY(-12px) scale(1); }
+            100% { opacity: 0; transform: translateY(-25px) scale(0.3); }
+        }
+
+        /* Option 3: Abstract F with Bubbles */
+        .logo-f {
+            width: 80px;
+            height: 80px;
+            position: relative;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 16px;
+            background: rgba(76, 175, 239, 0.1);
+        }
+
+        .f-shape {
+            width: 28px;
+            height: 40px;
+            position: relative;
+        }
+
+        .f-vertical {
+            width: 4px;
+            height: 40px;
+            background: #4cafef;
+            border-radius: 2px;
+        }
+
+        .f-horizontal {
+            position: absolute;
+            height: 4px;
+            background: #4cafef;
+            border-radius: 2px;
+            left: 0;
+        }
+
+        .f-horizontal:nth-child(2) {
+            width: 20px;
+            top: 0;
+        }
+
+        .f-horizontal:nth-child(3) {
+            width: 16px;
+            top: 18px;
+        }
+
+        .f-bubble {
+            position: absolute;
+            border-radius: 50%;
+            background: #4cafef;
+            opacity: 0;
+            animation: f-bubble 2s ease-in-out infinite;
+        }
+
+        .f-bubble:nth-child(5) { 
+            width: 4px; height: 4px; 
+            top: 20px; right: 15px; 
+            animation-delay: 0s; 
+        }
+        .f-bubble:nth-child(6) { 
+            width: 3px; height: 3px; 
+            top: 10px; right: 8px; 
+            animation-delay: 0.7s; 
+        }
+        .f-bubble:nth-child(7) { 
+            width: 5px; height: 5px; 
+            top: 35px; right: 20px; 
+            animation-delay: 1.4s; 
+        }
+
+        @keyframes f-bubble {
+            0% { opacity: 0; transform: scale(0.3) translateY(0px); }
+            50% { opacity: 1; transform: scale(1) translateY(-10px); }
+            100% { opacity: 0; transform: scale(0.2) translateY(-20px); }
+        }
+
+        /* Option 4: Vinyl with Fizz */
+        .logo-vinyl {
+            width: 80px;
+            height: 80px;
+            position: relative;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 16px;
+            background: rgba(76, 175, 239, 0.1);
+        }
+
+        .vinyl {
+            width: 45px;
+            height: 45px;
+            border: 3px solid #4cafef;
+            border-radius: 50%;
+            position: relative;
+            animation: vinyl-spin 4s linear infinite;
+        }
+
+        .vinyl::after {
+            content: '';
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 8px;
+            height: 8px;
+            background: #4cafef;
+            border-radius: 50%;
+        }
+
+        .vinyl-fizz {
+            position: absolute;
+            width: 3px;
+            height: 3px;
+            background: #4cafef;
+            border-radius: 50%;
+            opacity: 0;
+            animation: vinyl-fizz-up 3s ease-in-out infinite;
+        }
+
+        .vinyl-fizz:nth-child(2) { top: 10px; left: 20px; animation-delay: 0s; }
+        .vinyl-fizz:nth-child(3) { top: 15px; right: 18px; animation-delay: 1s; }
+        .vinyl-fizz:nth-child(4) { bottom: 15px; left: 15px; animation-delay: 2s; }
+
+        @keyframes vinyl-spin {
+            from { transform: rotate(0deg); }
+            to { transform: rotate(360deg); }
+        }
+
+        @keyframes vinyl-fizz-up {
+            0% { opacity: 0; transform: translateY(0px) scale(0.5); }
+            50% { opacity: 1; transform: translateY(-12px) scale(1); }
+            100% { opacity: 0; transform: translateY(-24px) scale(0.3); }
+        }
+
+        /* Size variations */
+        .size-demo {
+            display: flex;
+            gap: 20px;
+            align-items: center;
+            background-color: #1e1e1e;
+            padding: 20px;
+            border-radius: 21px;
+        }
+
+        .size-small { transform: scale(0.5); }
+        .size-medium { transform: scale(0.75); }
+        .size-large { transform: scale(1); }
+
+        .usage-note {
+            color: #e0e0e0;
+            font-size: 0.8rem;
+            opacity: 0.7;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <div class="logo-showcase">
+        <!-- Option 1: Sound Wave -->
+        <div class="logo-option">
+            <h3 class="logo-title">Sound Wave + Fizz</h3>
+            <div class="logo-wave">
+                <div class="wave-bar"></div>
+                <div class="wave-bar"></div>
+                <div class="wave-bar"></div>
+                <div class="wave-bar"></div>
+                <div class="wave-bar"></div>
+                <div class="wave-bar"></div>
+                <div class="bubble"></div>
+                <div class="bubble"></div>
+            </div>
+            <p class="usage-note">Music visualization with bubble effects</p>
+        </div>
+
+        <!-- Option 2: Musical Note -->
+        <div class="logo-option">
+            <h3 class="logo-title">Musical Note + Fizz</h3>
+            <div class="logo-note">
+                <div class="note"></div>
+                <div class="fizz-particle"></div>
+                <div class="fizz-particle"></div>
+                <div class="fizz-particle"></div>
+            </div>
+            <p class="usage-note">Classic music symbol with fizzy particles</p>
+        </div>
+
+        <!-- Option 3: Abstract F -->
+        <div class="logo-option">
+            <h3 class="logo-title">Abstract "F" + Bubbles</h3>
+            <div class="logo-f">
+                <div class="f-shape">
+                    <div class="f-vertical"></div>
+                    <div class="f-horizontal"></div>
+                    <div class="f-horizontal"></div>
+                </div>
+                <div class="f-bubble"></div>
+                <div class="f-bubble"></div>
+                <div class="f-bubble"></div>
+            </div>
+            <p class="usage-note">Stylized "F" for Fizzynest with bubbles</p>
+        </div>
+
+        <!-- Option 4: Vinyl Record -->
+        <div class="logo-option">
+            <h3 class="logo-title">Vinyl + Fizz</h3>
+            <div class="logo-vinyl">
+                <div class="vinyl"></div>
+                <div class="vinyl-fizz"></div>
+                <div class="vinyl-fizz"></div>
+                <div class="vinyl-fizz"></div>
+            </div>
+            <p class="usage-note">Spinning record with fizzy effects</p>
+        </div>
+    </div>
+
+    <!-- Size Examples -->
+    <div style="width: 100%; max-width: 600px;">
+        <h3 class="logo-title" style="text-align: center; margin-bottom: 20px;">Size Variations (Sound Wave Example)</h3>
+        <div class="size-demo">
+            <div class="logo-wave size-small">
+                <div class="wave-bar"></div>
+                <div class="wave-bar"></div>
+                <div class="wave-bar"></div>
+                <div class="wave-bar"></div>
+                <div class="wave-bar"></div>
+                <div class="wave-bar"></div>
+            </div>
+            <div class="logo-wave size-medium">
+                <div class="wave-bar"></div>
+                <div class="wave-bar"></div>
+                <div class="wave-bar"></div>
+                <div class="wave-bar"></div>
+                <div class="wave-bar"></div>
+                <div class="wave-bar"></div>
+            </div>
+            <div class="logo-wave size-large">
+                <div class="wave-bar"></div>
+                <div class="wave-bar"></div>
+                <div class="wave-bar"></div>
+                <div class="wave-bar"></div>
+                <div class="wave-bar"></div>
+                <div class="wave-bar"></div>
+            </div>
+        </div>
+        <p class="usage-note">Perfect for favicon, header, or app icon</p>
+    </div>
+</body>
+</html>

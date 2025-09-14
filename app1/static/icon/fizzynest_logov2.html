@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fizzynest Logo - Minimal</title>
+    <style>
+        *, *::before, *::after { 
+            box-sizing: border-box; 
+        }
+
+        body {
+            margin: 0;
+            padding: 40px;
+            background-color: #121212;
+            display: flex;
+            flex-direction: column;
+            gap: 40px;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            color: #e0e0e0;
+        }
+
+        /* Main logo version */
+        .logo-main {
+            text-align: center;
+            padding: 30px;
+            border-radius: 21px;
+            background-color: #1e1e1e;
+            max-width: 400px;
+        }
+
+        .logo-text {
+            font-size: 2.5rem;
+            font-weight: 600;
+            color: #4cafef;
+            margin: 0;
+            letter-spacing: -1px;
+            position: relative;
+        }
+
+        .logo-subtitle {
+            color: #e0e0e0;
+            font-size: 0.9rem;
+            font-weight: 400;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            margin-top: 8px;
+            opacity: 0.8;
+        }
+
+        /* Subtle fizz animation */
+        .fizz-dot {
+            position: absolute;
+            width: 4px;
+            height: 4px;
+            background: #4cafef;
+            border-radius: 50%;
+            opacity: 0;
+            animation: fizz 3s ease-in-out infinite;
+        }
+
+        .fizz-dot:nth-child(1) { top: 20%; right: 15%; animation-delay: 0s; }
+        .fizz-dot:nth-child(2) { top: 40%; right: 10%; animation-delay: 1s; }
+        .fizz-dot:nth-child(3) { top: 60%; right: 20%; animation-delay: 2s; }
+
+        @keyframes fizz {
+            0% { opacity: 0; transform: translateY(0px) scale(0.5); }
+            50% { opacity: 1; transform: translateY(-10px) scale(1); }
+            100% { opacity: 0; transform: translateY(-20px) scale(0.3); }
+        }
+
+        /* Alternative versions */
+        .logo-versions {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 20px;
+            width: 100%;
+            max-width: 800px;
+        }
+
+        .logo-variant {
+            background-color: #1e1e1e;
+            border-radius: 21px;
+            padding: 20px;
+            text-align: center;
+        }
+
+        /* Compact version */
+        .logo-compact {
+            font-size: 1.8rem;
+            font-weight: 600;
+            color: #4cafef;
+            margin: 0;
+        }
+
+        /* Horizontal version */
+        .logo-horizontal {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 15px;
+        }
+
+        .logo-horizontal .logo-text-h {
+            font-size: 1.5rem;
+            font-weight: 600;
+            color: #4cafef;
+            margin: 0;
+        }
+
+        .logo-horizontal .logo-subtitle-h {
+            color: #e0e0e0;
+            font-size: 0.8rem;
+            letter-spacing: 1px;
+            text-transform: uppercase;
+            opacity: 0.8;
+        }
+
+        /* Icon version */
+        .logo-icon {
+            width: 60px;
+            height: 60px;
+            border-radius: 12px;
+            background: linear-gradient(135deg, #4cafef, #3a9bdd);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 10px;
+        }
+
+        .logo-icon::before {
+            content: "F";
+            color: white;
+            font-size: 28px;
+            font-weight: 700;
+        }
+
+        /* Usage examples */
+        .usage-example {
+            background-color: #2a2a2a;
+            border-radius: 8px;
+            padding: 15px;
+            margin-top: 15px;
+        }
+
+        .nav-example {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background-color: #1e1e1e;
+            padding: 15px 20px;
+            border-radius: 12px;
+        }
+
+        .nav-logo {
+            font-size: 1.4rem;
+            font-weight: 600;
+            color: #4cafef;
+        }
+
+        .nav-menu {
+            display: flex;
+            gap: 20px;
+            list-style: none;
+            margin: 0;
+            padding: 0;
+        }
+
+        .nav-menu a {
+            color: #e0e0e0;
+            text-decoration: none;
+            font-size: 0.9rem;
+        }
+
+        .nav-menu a:hover {
+            color: #4cafef;
+        }
+
+        .section-title {
+            font-size: 1.2rem;
+            color: #4cafef;
+            margin-bottom: 20px;
+            text-align: center;
+        }
+
+        .code-snippet {
+            background-color: #2a2a2a;
+            padding: 15px;
+            border-radius: 8px;
+            font-family: monospace;
+            font-size: 0.85rem;
+            color: #e0e0e0;
+            overflow-x: auto;
+            margin-top: 10px;
+        }
+    </style>
+</head>
+<body>
+    <!-- Main Logo Version -->
+    <div class="logo-main">
+        <h1 class="logo-text">
+            FIZZYNEST
+            <div class="fizz-dot"></div>
+            <div class="fizz-dot"></div>
+            <div class="fizz-dot"></div>
+        </h1>
+        <div class="logo-subtitle">Music</div>
+    </div>
+
+    <!-- Logo Variations -->
+    <div class="logo-versions">
+        <!-- Compact Version -->
+        <div class="logo-variant">
+            <h3 class="section-title">Compact</h3>
+            <div class="logo-compact">FIZZYNEST</div>
+            <div class="code-snippet">&lt;h1 style="color: #4cafef;"&gt;FIZZYNEST&lt;/h1&gt;</div>
+        </div>
+
+        <!-- Horizontal Version -->
+        <div class="logo-variant">
+            <h3 class="section-title">Horizontal</h3>
+            <div class="logo-horizontal">
+                <div class="logo-text-h">FIZZYNEST</div>
+                <div class="logo-subtitle-h">MUSIC</div>
+            </div>
+        </div>
+
+        <!-- Icon Version -->
+        <div class="logo-variant">
+            <h3 class="section-title">Icon</h3>
+            <div class="logo-icon"></div>
+            <div style="font-size: 0.8rem; color: #4cafef;">Favicon/App Icon</div>
+        </div>
+    </div>
+
+    <!-- Usage in Navigation -->
+    <div style="width: 100%; max-width: 600px;">
+        <h3 class="section-title">In Navigation</h3>
+        <div class="nav-example">
+            <div class="nav-logo">FIZZYNEST</div>
+            <ul class="nav-menu">
+                <li><a href="#">Home</a></li>
+                <li><a href="#">Music</a></li>
+                <li><a href="#">Artists</a></li>
+                <li><a href="#">Contact</a></li>
+            </ul>
+        </div>
+    </div>
+
+    <!-- CSS Code for easy copy-paste -->
+    <div style="width: 100%; max-width: 600px;">
+        <h3 class="section-title">CSS for Your Site</h3>
+        <div class="code-snippet">
+.logo {
+  font-size: 2rem;
+  font-weight: 600;
+  color: #4cafef;
+  text-decoration: none;
+}
+
+.logo:hover {
+  color: #3a9bdd;
+}
+        </div>
+    </div>
+</body>
+</html>
