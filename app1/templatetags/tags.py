@@ -48,3 +48,5 @@ def comment_count(post_id):
 @register.filter('markdown')
 def to_markdown(text):
     return mark_safe(markdown(text))
+
+

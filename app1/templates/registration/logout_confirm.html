@@ -1,0 +1,63 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Logged Out</title>
+    <link rel="stylesheet" type="text/css" href="{% static 'css/style.css' %}">
+</head>
+<body>
+
+    <div class="logout-container">
+        <h1>Are you sure you want to log out?</h1>
+        <form method="post" action={% url "app1:logout" %}>
+            {% csrf_token %}
+            <button type="submit" class="button">i'm sure!</button>
+        </form>
+        <button onclick="history.back()" class="button">i'm regret it</button>
+
+    </div>
+
+</body>
+</html>
+
+
+<style>
+.logout-container {
+    max-width: 400px;
+    margin: 80px auto;
+    text-align: center;
+    background: #1a1a1a;
+    color: #f5f5f5;
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+    font-family: Arial, sans-serif;
+}
+
+.logout-container h1 {
+    margin-bottom: 10px;
+    font-size: 24px;
+}
+
+.logout-container p {
+    margin-bottom: 20px;
+    color: #bbb;
+}
+
+.logout-container .btn {
+    display: inline-block;
+    padding: 12px 20px;
+    background: #e63946;
+    color: white;
+    text-decoration: none;
+    border-radius: 8px;
+    font-weight: bold;
+    transition: background 0.3s;
+}
+
+.logout-container .btn:hover {
+    background: #c62828;
+}
+</style>

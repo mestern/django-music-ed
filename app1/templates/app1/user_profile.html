@@ -14,8 +14,13 @@
 
             <div class="profile-info">
                 <h2 class="username">{{ user.username }}</h2>
-                <p class="bio">{{ ser.profile.bio }}</p>
+                <p class="bio">{{ user.profile.bio }}</p>
                 <p class="location">{{ user.profile.location|default:"Unknown" }}</p>
+            </div>
+            <div>
+                <a href="" class="login-btn">Edit Profile</a>
+                <a href="{% url 'app1:logout_confirm' %}" class="login-btn">Logout</a>
+
             </div>
         </div>
 

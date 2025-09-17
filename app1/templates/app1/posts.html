@@ -7,10 +7,9 @@
 <div class="posts-container">
   {% for object in object_list %}
     <a href="{% url 'app1:post_details' object.id %}">
-
         <div class="post-card">
           {% if object.image %}
-            <img src="{{ object.image.url }}" alt="post image" class="post-img">
+            <img src="{{ object.image.first.image.url }}" alt="post image" class="post-img">
           {% endif %}
           <div class="post-content">
             <h2>{{ object.title }}</h2>

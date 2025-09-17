@@ -11,7 +11,7 @@
     <script src="{% static "js/post_details.js" %}" defer></script>
     <h1 class="post-title">{{ post.title }}</h1>
 
-       {% if images %}
+       {% if images.count > 1 %}
       <div class="image-slider">
         <button class="nav-btn prev-btn" onclick="prevImage()">&#10094;</button>
         <div class="image-wrapper">
@@ -21,7 +21,15 @@
         </div>
         <button class="nav-btn next-btn" onclick="nextImage()">&#10095;</button>
       </div>
-    {% endif %}
+      {% else %}
+           <div class="image-slider">
+            <div class="image-wrapper">
+              {% for img in images %}
+                <img src="{{ img.image.url }}" alt="{{ post.title }}" class="post-image slider-image {% if forloop.first %}active{% endif %}">
+              {% endfor %}
+            </div>
+            </div>
+       {% endif %}
 
 
     <p class="post-author">By: {{ post.auther }}</p>

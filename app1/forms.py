@@ -1,5 +1,6 @@
 # imports forms to make my forms
 from django import forms
+from django.contrib.auth.forms import AuthenticationForm
 from django.shortcuts import get_object_or_404
 
 # import my models from models.py
@@ -89,7 +90,8 @@ class SearchForm(forms.Form):
 #         model = Image
 #         fields = ['image', ]
 
-
-class LoginForm(forms.Form):
-    username = forms.CharField(max_length=30, required=True)
-    password = forms.CharField(max_length=50, required=True)
+class CustomAuthenticationForm(AuthenticationForm):
+    error_messages = {
+        "invalid_login": "usrname or password is incorrect",
+        "inactive": "This account is inactive. Please contact support.",
+    }

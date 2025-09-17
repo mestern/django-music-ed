@@ -6,24 +6,43 @@
   <div class="header-container">
     <!-- Blog name -->
     <div class="logo">
-      <a href=>FizzyNest</a>
+      <a href="{% url 'app1:index' %}">FizzyNest</a>
     </div>
 
     <!-- Navigation -->
     <nav class="navbar">
       <ul class="nav-links">
-        <li><a href={% url 'app1:index' %}>Home</a></li>
-        <li><a href={% url 'app1:posts' %}>Posts</a></li>
-        <li><a href={% url 'app1:ticket' %}>Ticket</a></li>
-        <li><a href={% url 'app1:post_create' %}>Create</a></li>
+        <li><a href="{% url 'app1:index' %}">Home</a></li>
+        <li><a href="{% url 'app1:posts' %}">Posts</a></li>
+        <li><a href="{% url 'app1:ticket' %}">Ticket</a></li>
+        <li><a href="{% url 'app1:post_create' %}">Create</a></li>
       </ul>
     </nav>
 
     <!-- Search bar -->
     <form action="{% url 'app1:post_search' %}" method="GET" class="search-form">
-        {% csrf_token %}
       <input type="text" name="query" required placeholder="Search..." />
       <button type="submit">🔍</button>
     </form>
+
+    <!-- User Profile / Login -->
+    <div class="user-section">
+      {% if request.user.is_authenticated %}
+        <div class="profile-dropdown">
+          <button class="profile-btn">
+            <img src="{% if request.user.profile.image %}{{ request.user.profile.image.url }}{% else %}{% static 'img/default-avatar.png' %}{% endif %}"
+                 alt="Profile"
+                 class="profile-pic">
+          </button>
+          <div class="dropdown-content">
+            <a href={% url "app1:profile" request.user.username%}>Profile</a>
+            <a href="">Settings</a>
+            <a href={% url "app1:logout_confirm" %}>Logout</a>
+          </div>
+        </div>
+      {% else %}
+        <a href="{% url 'app1:login' %}" class="login-btn">Login</a>
+      {% endif %}
+    </div>
   </div>
 </header>

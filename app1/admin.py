@@ -41,3 +41,8 @@ class AdminTicket(admin.ModelAdmin):
 # @admin.register(Image)
 # class AdminImage(admin.ModelAdmin):
 #     list_display = ["title", 'post', 'created']
+
+
+@admin.register(Profile)
+class AdminProfile(admin.ModelAdmin):
+    list_display = ['user']

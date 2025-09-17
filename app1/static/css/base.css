@@ -1,5 +1,10 @@
 @import url("https://fonts.googleapis.com/css?family=Montserrat:400,700");
 
+body{
+    background-color: #121212;
+}
+
+
 /*__________________________________list style________________________________________*/
 
 * {

@@ -1,95 +1,99 @@
-/* Center everything in the viewport */
+/* make padding included in width everywhere (critical) */
+*, *::before, *::after { box-sizing: border-box; }
+
+/* page + container (your existing styles kept) */
 body {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    min-height: 100vh;
-    margin: 0;
-    background-color: #121212;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    color: #e0e0e0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  margin: 0;
+  background-color: #121212;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  color: #e0e0e0;
 }
 
-/* Container for the login card */
 .login-container {
-    width: 100%;
-    max-width: 370px;          /* standard card width */
+    width: 400px;
+    padding: 30px;
+    border-radius: 21px;
     background-color: #1e1e1e;
-    padding: 40px 30px;
-    border-radius: 12px;
-    box-shadow: 0 6px 25px rgba(0, 0, 0, 0.7);
-    text-align: center;
 }
 
-/* Title */
-.login-title {
-    font-size: 26px;
-    margin-bottom: 25px;
-    color: #ffffff;
-    font-weight: 600;
-}
-
-/* Form groups */
+/* form group + wrapper */
 .login-form .form-group {
-    margin-bottom: 20px;
-    text-align: left;
+  margin-bottom: 20px;
+  text-align: left;
+  position: relative;     /* safe fallback */
+  min-width: 0;           /* allow shrinking inside flex parents */
 }
 
-/* Labels */
-.login-form label {
-    display: block;
-    margin-bottom: 6px;
-    font-size: 14px;
-    color: #bbbbbb;
+/* Helpful specific selector to override other frameworks */
+.login-form .input-wrapper {
+  position: relative;
+  width: 100%;
+  min-width: 0;           /* again: prevent overflow inside flex */
 }
 
-/* Inputs */
-.login-form input {
-    width: 100%;
-    padding: 12px;
-    border-radius: 8px;
-    border: 1px solid #333;
-    background-color: #2a2a2a;
-    color: #e0e0e0;
-    font-size: 15px;
-    transition: border 0.3s, background 0.3s;
+/* inputs (text/password/email) */
+.login-form input[type="text"],
+.login-form input[type="password"],
+.login-form input[type="email"] {
+  width: 100%;
+  padding: 10px 48px 10px 12px; /* right padding leaves space for toggle */
+  border-radius: 8px;
+  border: none;
+  background-color: #2a2a2a;
+  color: #e0e0e0;
+  font-size: 16px;
+  outline: none;
+  display: block;
+  box-sizing: border-box; /* redundant but explicit */
+  min-width: 0;
 }
 
+/* focus look */
 .login-form input:focus {
-    border-color: #4cafef;
-    background-color: #333;
-    outline: none;
+  border: 1px solid #4cafef;
+  background-color: #333;
+  padding: 9px 47px 9px 11px; /* preserve inner size if you add border on focus */
 }
 
-/* Button */
+/* toggle button positioned on top-right of the wrapper */
+#togglePassword {
+  position: absolute;
+  right: 10px;
+  top: 50%;
+  transform: translateY(-50%);
+  background: none;
+  border: none;
+  color: #4cafef;
+  font-weight: 600;
+  cursor: pointer;
+  font-size: 13px;
+  padding: 6px 8px;
+  z-index: 2;
+  line-height: 1;
+}
+
+/* small hover tweak */
+#togglePassword:hover { color: #3a9bdd; }
+
+/* login button */
 .login-btn {
-    width: 100%;
-    padding: 12px;
-    background-color: #4cafef;
-    border: none;
-    border-radius: 8px;
-    color: #fff;
-    font-size: 16px;
-    font-weight: 500;
-    cursor: pointer;
-    transition: background 0.3s ease;
+  width: 100%;
+  padding: 12px;
+  background-color: #4cafef;
+  border: none;
+  border-radius: 8px;
+  color: white;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background 0.25s ease;
 }
 
-.login-btn:hover {
-    background-color: #3a9bdd;
-}
+.login-btn:hover { background-color: #3a9bdd; }
 
-/* Error messages */
-.error {
-    color: #ff6b6b;
-    font-size: 13px;
-    margin-top: 6px;
-}
+/* error text if present */
+.error { color: #ff6b6b; font-size: 13px; margin-top: 5px; }
 
-/* Responsive tweaks */
-@media (max-width: 480px) {
-    .login-container {
-        padding: 30px 20px;
-        max-width: 90%;
-    }
-}

@@ -1,15 +1,47 @@
 {% load static %}
 
-<link rel='stylesheet' type="text/css", href={% static "css/messages.css" %}>
-<script src={% static "js/messages.js" %}></script>
+<link rel="stylesheet" type="text/css" href="{% static 'css/messages.css' %}">
+<script src="{% static 'js/messages.js' %}"></script>
 
-
-{% if messages %}
 <div id="popup-message">
-    {% for message in messages %}
-        <div class="popup {{ message.tags }}">
-            {{ message }}
-        </div>
-    {% endfor %}
+
+    {# Django messages framework #}
+    {% if messages %}
+        {% for message in messages %}
+            <div class="popup {{ message.tags }}">
+                {% if 'error' in message.tags %}
+                    <div class="error-box">
+                        ⚠️ <strong>Error:</strong> {{ message }}
+                    </div>
+                {% else %}
+                    <div class="normal-box">
+                        {{ message }}
+                    </div>
+                {% endif %}
+            </div>
+        {% endfor %}
+    {% endif %}
+
+    {# Form field-specific errors #}
+    {% if form %}
+        {% for field in form %}
+            {% for error in field.errors %}
+                <div class="popup error">
+                    <div class="error-box">
+                        ⚠️ <strong>{{ field.label }}:</strong> {{ error }}
+                    </div>
+                </div>
+            {% endfor %}
+        {% endfor %}
+
+        {# Non-field errors (like "invalid login") #}
+        {% for error in form.non_field_errors %}
+            <div class="popup error">
+                <div class="error-box">
+                    ⚠️ <strong>Error:</strong> {{ error }}
+                </div>
+            </div>
+        {% endfor %}
+    {% endif %}
+
 </div>
-{% endif %}

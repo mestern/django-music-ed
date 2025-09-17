@@ -22,7 +22,7 @@ from django.conf.urls.static import static
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('app1/', include('app1.urls', namespace='app1'))
+    path('', include('app1.urls', namespace='app1'))
 ] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT) # for uploading image i had to do this shet
 
 if settings.DEBUG:

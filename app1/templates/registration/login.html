@@ -18,24 +18,23 @@
                 {% csrf_token %}
               <div class="form-group">
                 <label for="username">Username</label>
-                  {{ form.username }}
+                  <input type="text" name="username" autofocus="" autocapitalize="none"
+                         autocomplete="username" maxlength="150" required="" id="id_username"
+                  {% if form.username.value %}value="{{ form.username.value }}"{% endif %}>
               </div>
 
               <div class="form-group">
                 <label for="password">Password</label>
                 <div class="input-wrapper">
-                  <input id="password" name="password" type="password" value="{{ form.password.value }}" maxlength="50" />
+                  <input id="password" name="password" type="password" autocomplete="none" maxlength="50" />
                   <button type="button" id="togglePassword" aria-label="Show password">Show</button>
                 </div>
               </div>
-
+                <input type="hidden" href="app1:profile">
               <button class="login-btn" type="submit">Login</button>
-            </form>
 
+            </form>
     </div>
-    {% for error in objects %}
-        {{ messages }}
-    {% endfor %}
 
     <script src="{% static 'js/login_form.js' %}"></script>
 </body>
