@@ -29,6 +29,7 @@
                   <input id="password" name="password" type="password" autocomplete="none" maxlength="50" />
                   <button type="button" id="togglePassword" aria-label="Show password">Show</button>
                 </div>
+                  <a href="{% url "app1:password_reset" %}" style="color: #1976d2">forget password</a>
               </div>
                 <input type="hidden" href="app1:profile">
               <button class="login-btn" type="submit">Login</button>

@@ -95,3 +95,5 @@ class CustomAuthenticationForm(AuthenticationForm):
         "invalid_login": "usrname or password is incorrect",
         "inactive": "This account is inactive. Please contact support.",
     }
+
+auth = AuthenticationForm()

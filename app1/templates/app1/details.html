@@ -32,7 +32,7 @@
        {% endif %}
 
 
-    <p class="post-author">By: {{ post.auther }}</p>
+    <p class="post-author">By: <a href="{% url "app1:profile" post.auther.username %}">{{ post.auther }}</a></p>
 
     <div class="post-description">
         {{ post.description|linebreaks }}

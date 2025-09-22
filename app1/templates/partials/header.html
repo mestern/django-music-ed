@@ -30,9 +30,7 @@
       {% if request.user.is_authenticated %}
         <div class="profile-dropdown">
           <button class="profile-btn">
-            <img src="{% if request.user.profile.image %}{{ request.user.profile.image.url }}{% else %}{% static 'img/default-avatar.png' %}{% endif %}"
-                 alt="Profile"
-                 class="profile-pic">
+            <img src="{% if user.profile.image %}{{ user.profile.image.url }}{% else %}{% static 'icon/images/default-avatar.png' %}{% endif %}" alt="Profile picture" class="profile-pic">
           </button>
           <div class="dropdown-content">
             <a href={% url "app1:profile" request.user.username%}>Profile</a>
