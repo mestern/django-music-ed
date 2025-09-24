@@ -1,0 +1,110 @@
+.edit-profile-container {
+  max-width: 500px;
+  margin: 40px auto;
+  background: #1f1f1f;
+  padding: 30px;
+  border-radius: 15px;
+  box-shadow: 0 0 25px rgba(0,0,0,0.6);
+  text-align: center;
+  color: #e0e0e0;
+}
+
+.profile-image-upload {
+  position: relative;
+  display: inline-block;
+  margin-bottom: 20px;
+}
+
+.profile-image-upload img {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 3px solid #4cafef;
+  cursor: pointer;
+  display: block;
+}
+
+.profile-image-upload input[type="file"] {
+  display: none;
+}
+
+/* Overlay */
+.profile-image-upload .overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  background: rgba(0, 0, 0, 0.5);
+  color: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.profile-image-upload:hover .overlay {
+  opacity: 1;
+}
+
+.upload-text {
+  font-size: 16px;
+  font-weight: bold;
+}
+
+.form-group {
+  text-align: left;
+  margin-bottom: 20px;
+}
+
+.form-group label {
+  display: block;
+  margin-bottom: 6px;
+  font-size: 14px;
+  color: #bbb;
+}
+
+.form-group input,
+.form-group textarea {
+  width: 100%;
+  padding: 10px;
+  border-radius: 8px;
+  border: none;
+  background: #2a2a2a;
+  color: #e0e0e0;
+  font-size: 16px;
+}
+
+
+.bio {
+  resize: none;       /* disables resize handles */
+  width: 100%;        /* fixed width */
+  height: 120px;      /* fixed height */
+  padding: 10px;
+  border-radius: 8px;
+  background: #2a2a2a;
+  color: #e0e0e0;
+  font-size: 14px;
+  border: none;
+}
+
+
+
+.save-btn {
+  width: 100%;
+  padding: 12px;
+  background: #4cafef;
+  border: none;
+  border-radius: 8px;
+  color: white;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background 0.25s ease;
+}
+
+.save-btn:hover {
+  background: #3a9bdd;
+}

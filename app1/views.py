@@ -1,9 +1,10 @@
 from django.contrib.auth.views import LoginView, LogoutView, PasswordChangeView, PasswordResetView
+from django.utils.dateparse import postgres_interval_re
 from django.views.generic import ListView, DetailView, FormView, CreateView
 from django.shortcuts import render, get_object_or_404, redirect
 from django.contrib.auth.decorators import login_required
 from django.views.decorators.http import require_POST
-from django.http import HttpResponse, Http404
+from django.http import HttpResponse, Http404, HttpResponseForbidden
 from django.contrib.auth.models import User
 from django.contrib import messages
 from .forms import *
@@ -50,7 +51,7 @@ def post_create(request):
         form = PostCreateForm()
     return render(request, "forms/post_create.html", {'form': form})
 
-
+@login_required
 @require_POST
 def post_comment(request, pk):
     post = get_object_or_404(Post, id=pk, status=Post.Status.PUBLISHED)
@@ -145,8 +146,12 @@ class LoginView(LoginView):
     authentication_form = CustomAuthenticationForm
 
     def get_success_url(self):
-        username = self.request.user.get_username()
-        return reverse('app1:profile', kwargs={'username': username})
+            next_url = self.request.POST.get("next") or self.request.GET.get("next")
+            if next_url:
+                return next_url
+            else:
+                username = self.request.user.get_username()
+                return reverse('app1:profile', kwargs={'username': username})
 
 
 @login_required()
@@ -158,4 +163,48 @@ def profile(request, username):
     user = get_object_or_404(User, username=username)
     template = "app1/user_profile.html" if user == request.user else "app1/profile.html"
     posts = Post.published.filter(auther=user)
+    print('\a')
     return render(request, template, {"user": user, "posts": posts})
+
+
+def signup_view(request):
+    if request.method == "POST":
+        form = SignUpForm(request.POST)
+        if form.is_valid():
+            cd = form.cleaned_data
+            print(cd['password1'])
+            user = form.save(commit=False)
+            user.set_password(cd['password1'])
+            user.save()
+            Profile.objects.create(user=user)
+            return redirect("app1:login")
+
+    else:
+        form = SignUpForm()
+    return render(request,
+                  "registration/signup_form.html", {"form": form})
+
+@login_required()
+def profile_edit(request, username):
+    if username != request.user.get_username():
+        return HttpResponseForbidden("You are not authorized to edit this profile")
+    profile = Profile.objects.get(user=request.user)
+    if request.method == "POST":
+        form = EditProfileForm(request.POST, request.FILES , instance=profile)
+        if form.is_valid():
+            form.save()
+
+            return redirect("app1:profile", username=request.user)
+    else:
+        form = EditProfileForm(instance=profile)
+    return render(request, "app1/edit_profile.html", {"form": form})
+
+
+@login_required
+def post_delete(request, pk):
+    post = get_object_or_404(Post, id=pk, auther=request.user)
+    if request.method == "POST":
+        post.delete()
+        messages.success(request, "Post deleted successfully!")
+        return redirect("app1:profile", username=request.user.username)
+    return redirect("app1:profile", username=request.user.username)

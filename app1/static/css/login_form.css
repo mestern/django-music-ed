@@ -97,3 +97,34 @@ body {
 /* error text if present */
 .error { color: #ff6b6b; font-size: 13px; margin-top: 5px; }
 
+/* Tabs container */
+.auth-tabs {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 20px;
+  border-bottom: 2px solid #2a2a2a;
+}
+
+/* Each tab */
+.auth-tab {
+  flex: 1;
+  text-align: center;
+  padding: 12px;
+  font-size: 16px;
+  text-decoration: none;
+  color: #bbb;
+  transition: color 0.3s, border-bottom 0.3s;
+  border-bottom: 2px solid transparent;
+}
+
+/* Hover effect */
+.auth-tab:hover {
+  color: #4cafef;
+}
+
+/* Active tab (selected) */
+.auth-tab.active {
+  color: #4cafef;
+  font-weight: bold;
+  border-bottom: 2px solid #4cafef;
+}

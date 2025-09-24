@@ -13,29 +13,35 @@
 <body>
 
     <div class="login-container">
-        <h2 class="login-title">Login</h2>
-            <form method="post" class="login-form">
-                {% csrf_token %}
-              <div class="form-group">
-                <label for="username">Username</label>
-                  <input type="text" name="username" autofocus="" autocapitalize="none"
-                         autocomplete="username" maxlength="150" required="" id="id_username"
-                  {% if form.username.value %}value="{{ form.username.value }}"{% endif %}>
-              </div>
-
-              <div class="form-group">
-                <label for="password">Password</label>
-                <div class="input-wrapper">
-                  <input id="password" name="password" type="password" autocomplete="none" maxlength="50" />
-                  <button type="button" id="togglePassword" aria-label="Show password">Show</button>
-                </div>
-                  <a href="{% url "app1:password_reset" %}" style="color: #1976d2">forget password</a>
-              </div>
-                <input type="hidden" href="app1:profile">
-              <button class="login-btn" type="submit">Login</button>
-
-            </form>
+    <!-- Tab Switcher -->
+    <div class="auth-tabs">
+        <a href="{% url 'app1:login' %}" class="auth-tab active">Login</a>
+        <a href="{% url 'app1:signup' %}" class="auth-tab">Signup</a>
     </div>
+
+    <h2 class="login-title">Login</h2>
+    <form method="post" class="login-form">
+        {% csrf_token %}
+        <div class="form-group">
+            <label for="username">Username</label>
+            <input type="text" name="username" id="id_username"
+                   autocomplete="username" maxlength="150" required
+                   {% if form.username.value %}value="{{ form.username.value }}"{% endif %}>
+        </div>
+
+        <div class="form-group">
+            <label for="password">Password</label>
+            <div class="input-wrapper">
+                <input id="password" name="password" type="password" maxlength="50" />
+                <button type="button" id="togglePassword" aria-label="Show password">Show</button>
+            </div>
+            <a href="{% url 'app1:password_reset' %}" style="color: #1976d2">Forgot password?</a>
+        </div>
+
+        <button class="login-btn" type="submit">Login</button>
+    </form>
+</div>
+
 
     <script src="{% static 'js/login_form.js' %}"></script>
 </body>

@@ -1,0 +1,43 @@
+{% load static %}
+{% include "partials/messages.html" %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>signup</title>
+    <link type="text/css" rel="stylesheet" href="{% static "css/login_form.css" %}">
+</head>
+<body>
+<div class="login-container">
+        <div class="auth-tabs">
+        <a href="{% url 'app1:login' %}" class="auth-tab">Login</a>
+        <a href="{% url 'app1:signup' %}" class="auth-tab active">Signup</a>
+    </div>
+    <h2 class="login-title">SignUp</h2>
+    <form method="post" class="login-form">
+        {% csrf_token %}
+        <label for="id_username">Username:</label>
+        <input type="text" name="username" value="{% if form.username.value %}{{ form.username.value }}{% endif %}" maxlength="150" required="" aria-invalid="true" aria-describedby="id_username_helptext id_username_error" id="id_username">
+        <label for="id_email">Email:</label>
+        {{ form.email }}
+        <label for="id_password1">Password:</label>
+        {{ form.password1 }}
+        <label for="id_password2">Password Confirm:</label>
+        {{ form.password2 }}
+        {% if form %}
+            {% for field in form %}
+                {% for error in field.errors %}
+                    <div class="error">
+                        {{ error }}
+                    </div>
+                    <br>
+                {% endfor %}
+            {% endfor %}
+        {% endif %}
+        <button class="login-btn" type="submit">Create Account</button>
+
+    </form>
+</div>
+</body>
+</html>

@@ -39,7 +39,7 @@
           </div>
         </div>
       {% else %}
-        <a href="{% url 'app1:login' %}" class="login-btn">Login</a>
+        <a href="{% url 'app1:login' %}?next={{ request.get_full_path }}" class="login-btn">Login</a>
       {% endif %}
     </div>
   </div>

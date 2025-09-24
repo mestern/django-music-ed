@@ -17,11 +17,16 @@ urlpatterns = [
     path('create/', views.post_create, name="post_create"),
     path('search/', views.post_search, name="post_search"),
 
+    path('<int:pk>/delete/', views.post_delete, name="post_delete"),
+
     # _________________registration and authentication______________________
     # login logout
     path('login/', views.LoginView.as_view(), name="login"),
     path('loggedout/', auth_views.LogoutView.as_view(), name="logout"),
     path('logout/', views.logout_view, name="logout_confirm"),
+
+    # sign up
+    path('signup/', views.signup_view, name="signup"),
 
     # password
     path('password_change/', auth_views.PasswordChangeView.as_view(success_url='done/'), name="password_change"),
@@ -38,5 +43,6 @@ urlpatterns = [
 
     # _________________user________________________
     path('<str:username>', views.profile, name="profile"),
+    path('<str:username>/edit', views.profile_edit, name="edit_profile"),
 
     ]

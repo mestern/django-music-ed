@@ -67,7 +67,12 @@ class Post(models.Model):
 class Profile(models.Model):
     user = models.OneToOneField(User, on_delete=models.CASCADE, related_name='profile')
     bio = models.TextField(blank=True, default='')
+    first_name = models.CharField(max_length=250, blank=True, null=True)
+    last_name = models.CharField(max_length=250, blank=True, null=True)
     image = models.ImageField(upload_to='profile/', blank=True, null=True)
+    birth_date = models.DateField(blank=True, null=True)
+    def __str__(self):
+        return self.user.username
     # location = models.CharField(max_length=120)
 
 

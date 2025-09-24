@@ -1,7 +1,8 @@
 # imports forms to make my forms
 from django import forms
-from django.contrib.auth.forms import AuthenticationForm
-from django.shortcuts import get_object_or_404
+from django.contrib.auth.forms import AuthenticationForm, UserCreationForm
+from django.contrib.auth.password_validation import validate_password
+from django.utils.translation import gettext_lazy as _
 
 # import my models from models.py
 from .models import *
@@ -96,4 +97,48 @@ class CustomAuthenticationForm(AuthenticationForm):
         "inactive": "This account is inactive. Please contact support.",
     }
 
-auth = AuthenticationForm()
+
+class SignUpForm(forms.ModelForm):
+    password1 = forms.CharField(label='Password', widget=forms.PasswordInput, required=True)
+    password2 = forms.CharField(label='Password confirmation', widget=forms.PasswordInput, required=True)
+    class Meta:
+        model = User
+        fields = ['username', 'email',]
+
+    error_messages = {
+        "password_mismatch": _("The two password fields didn’t match."),
+    }
+
+    def clean(self):
+        cleaned_data = super().clean()
+        password1 = cleaned_data.get("password1")
+        password2 = cleaned_data.get("password2")
+
+        if password1 and password2 and password1 != password2:
+            self.add_error("password2", self.error_messages["password_mismatch"])
+        else:
+            # Run Django's password validators on password1
+            try:
+                validate_password(password1, self.instance)
+            except forms.ValidationError as e:
+                self.add_error("password1", e)
+        return cleaned_data
+
+
+
+class EditProfileForm(forms.ModelForm):
+    class Meta:
+        model = Profile
+        fields = ['first_name', 'last_name', 'bio', 'image', 'birth_date']
+        widgets = {
+            'first_name': forms.TextInput(attrs={})
+        }
+
+
+
+# class EditUserForm(forms.ModelForm):
+#     class Meta:
+#         model = User
+#         fields = ['username', 'email']
+
+

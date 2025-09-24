@@ -5,7 +5,7 @@
 <head>
     <meta charset="UTF-8">
     <title>Logged Out</title>
-    <link rel="stylesheet" type="text/css" href="{% static 'css/style.css' %}">
+    <link rel="stylesheet" type="text/css" href="{% static 'css/login_form.css' %}">
 </head>
 <body>
 
@@ -13,9 +13,11 @@
         <h1>Are you sure you want to log out?</h1>
         <form method="post" action={% url "app1:logout" %}>
             {% csrf_token %}
-            <button type="submit" class="button">i'm sure!</button>
+
+            <button type="submit" class="login-btn">i'm sure!</button>
         </form>
-        <button onclick="history.back()" class="button">i'm regret it</button>
+        <button onclick="history.back()" class="btn">i'm regret it</button>
+
 
     </div>
 
