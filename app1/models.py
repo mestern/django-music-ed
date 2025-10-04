@@ -74,6 +74,11 @@ class Profile(models.Model):
     def __str__(self):
         return self.user.username
     # location = models.CharField(max_length=120)
+    @receiver(post_delete)
+    def pre_delete(sender, instance, **kwargs):
+        if isinstance(instance, Image):
+            if instance.image:  # Replace your_file_field with the name of your FileField/ImageField
+                instance.image.delete(save=False)
 
 
 class Comment(models.Model):

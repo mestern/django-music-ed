@@ -167,6 +167,7 @@ def profile(request, username):
     return render(request, template, {"user": user, "posts": posts})
 
 
+print("sd"), print("ds")
 def signup_view(request):
     if request.method == "POST":
         form = SignUpForm(request.POST)
